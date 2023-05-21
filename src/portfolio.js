@@ -3,7 +3,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://colet0227.github.io/',
-  title: 'uhhh',
+  title: 'Cole Thompson',
 }
 
 const about = {
