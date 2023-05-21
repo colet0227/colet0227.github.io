@@ -4,6 +4,7 @@ import ProjectContainer from '../ProjectContainer/ProjectContainer'
 import './Projects.css'
 
 const Projects = () => {
+  console.log(projects); // debug line
   if (!projects.length) return null
 
   return (

@@ -1,3 +1,4 @@
+// theme.js
 import { createContext, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 
@@ -21,7 +22,7 @@ const ThemeProvider = ({ children }) => {
   }
 
   return (
-    <ThemeContext.Provider value={[{ themeName, toggleTheme }]}>
+    <ThemeContext.Provider value={{ themeName, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   )
