@@ -3,7 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import './Header.css'
 
 const Header = () => {
-  console.log(header); // debug line
+  // console.log(header); // debug line
   const { homepage, title } = header
 
   return (

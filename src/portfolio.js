@@ -3,7 +3,7 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://colet0227.github.io/',
-  title: 'Cole Thompson',
+  title: 'featured',
 }
 
 const about = {
@@ -21,6 +21,27 @@ const about = {
 }
 
 const projects = [
+  // projects can be added an removed
+  // if there are no projects, Projects section won't show up
+  {
+    name: 'fcker',
+    description:
+      'ftheir yeation. In addition, they can search the nearby theaters from where they currently are located.',
+    stack: ['localstorage', 'Openweather API', 'Google Map API','Movie Database API'],
+    sourceCode: 'google.com',
+    livePreview: 'google.com',
+  },
+  {
+    name: 'Event Planner',
+    description:
+      'Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.',
+    stack: ['swiper.js', 'npm', 'jawsdb','handlebars','express','nodejs'],
+    sourceCode: 'google.com',
+    livePreview: 'google.com',
+  },
+]
+
+const experience = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
@@ -69,4 +90,4 @@ const contact = {
   email: 'colet0227@gmail.com',
 }
 
-export { header, about, projects, skills, contact }
+export { header, about, projects, skills, contact, experience }
