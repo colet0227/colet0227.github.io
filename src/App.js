@@ -1,28 +1,8 @@
-// import React from 'react';
-// import Header from './components/Header/Header';
-// import Projects from './components/Projects/Projects';
-// // import Experience from './components/Experience';
-// // import Contact from './components/Contact';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header />
-//       <Projects />
-//       {/* <Experience /> */}
-//       {/* <Contact /> */}
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import { useContext } from 'react'
 import { ThemeContext } from './contexts/theme'
 import Header from './components/Header/Header'
 // import About from './components/About/About'
-// import Projects from './components/Projects/Projects'
+import Projects from './components/Projects/Projects'
 // import Skills from './components/Skills/Skills'
 // import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 // import Contact from './components/Contact/Contact'
@@ -30,7 +10,7 @@ import Header from './components/Header/Header'
 import './App.css'
 
 const App = () => {
-  const { themeName, toggleTheme } = useContext(ThemeContext)
+  const { themeName } = useContext(ThemeContext)
 
   return (
     <div id='top' className={`${themeName} app`}>
@@ -38,7 +18,7 @@ const App = () => {
 
       <main>
         {/* <About /> */}
-        {/* <Projects /> */}
+        <Projects />
         {/* <Skills /> */}
         {/* <Contact /> */}
       </main>
