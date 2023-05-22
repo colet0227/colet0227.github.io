@@ -28,16 +28,16 @@ const projects = [
     description:
       'ftheir yeation. In addition, they can search the nearby theaters from where they currently are located.',
     stack: ['localstorage', 'Openweather API', 'Google Map API','Movie Database API'],
-    sourceCode: 'google.com',
-    livePreview: 'google.com',
+    sourceCode: 'https://colet0227.github.io/',
+    livePreview: 'https://colet0227.github.io/',
   },
   {
     name: 'Event Planner',
     description:
       'Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.',
     stack: ['swiper.js', 'npm', 'jawsdb','handlebars','express','nodejs'],
-    sourceCode: 'google.com',
-    livePreview: 'google.com',
+    sourceCode: 'https://colet0227.github.io/',
+    livePreview: 'https://colet0227.github.io/',
   },
 ]
 
@@ -49,16 +49,16 @@ const experience = [
     description:
       'ftheir yeation. In addition, they can search the nearby theaters from where they currently are located.',
     stack: ['localstorage', 'Openweather API', 'Google Map API','Movie Database API'],
-    sourceCode: 'google.com',
-    livePreview: 'google.com',
+    sourceCode: 'https://colet0227.github.io/',
+    livePreview: 'https://colet0227.github.io/',
   },
   {
     name: 'Event Planner',
     description:
       'Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.',
     stack: ['swiper.js', 'npm', 'jawsdb','handlebars','express','nodejs'],
-    sourceCode: 'google.com',
-    livePreview: 'google.com',
+    sourceCode: 'https://colet0227.github.io/',
+    livePreview: 'https://colet0227.github.io/',
   },
 ]
 
