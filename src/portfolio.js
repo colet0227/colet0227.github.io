@@ -13,7 +13,7 @@ const about = {
   role: 'hey',
   description:
     'elopment.',
-  resume: 'gmail.com',
+  resume: '',
   social: {
     linkedin: 'google.com',
     github: 'google.com',
