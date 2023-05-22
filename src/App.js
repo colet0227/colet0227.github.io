@@ -13,19 +13,20 @@ const App = () => {
   const { themeName } = useContext(ThemeContext);
 
   return (
-    <div id='top' className={`${themeName} app`}>
-      <Header />
-
-      <main>
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-
-      <ScrollToTop />
-      <Footer />
+    <div className={`${themeName} app`}>
+      <div className="content">
+        <Header />
+        <main>
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+        <ScrollToTop />
+        <Footer />
+      </div>
     </div>
+
   )
 }
 

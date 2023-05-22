@@ -4,6 +4,7 @@
     width: 95%;
     margin: 0 auto;
     justify-content: space-between;
+    /* position: fixed; */
   }
   
   @media (max-width: 600px) {
