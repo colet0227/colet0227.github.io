@@ -1,8 +1,6 @@
 import { useContext, useState } from 'react'
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact, experience } from '../../portfolio'
 import './Navbar.css'
@@ -75,15 +73,6 @@ const Navbar = () => {
         aria-label='toggle theme'
       >
         {themeName === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-      </button>
-
-      <button
-        type='button'
-        onClick={toggleNavList}
-        className='btn btn--icon nav__hamburger'
-        aria-label='toggle navigation'
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
       </button>
     </nav>
   )

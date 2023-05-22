@@ -21,7 +21,6 @@
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
-  text-transform: capitalize; /* Capitalizes the first letter */
 }
 
 .link--nav:hover {
