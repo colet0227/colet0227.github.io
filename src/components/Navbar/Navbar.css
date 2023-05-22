@@ -1,9 +1,8 @@
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   color: var(--icon-color);
-  padding: 15px;
 }
 
 .nav__list {
