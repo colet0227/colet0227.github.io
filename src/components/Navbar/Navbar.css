@@ -44,3 +44,7 @@
 .nav__theme, .nav__hamburger {
   margin-left: 20px;
 }
+
+.nav__list-item:last-child {
+  margin-right: 20px;
+}
