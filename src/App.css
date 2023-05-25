@@ -3,7 +3,7 @@
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
-  overflow: hidden;
+  overflow: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -50,7 +50,7 @@ main {
 
 .center {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 
 .link {
@@ -95,14 +95,19 @@ main {
   font-weight: 500;
   font-size: 0.9rem;
   transition: transform 0.2s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn--outline {
-  color: var(--clr-primary);
-  border: 2px solid var(--clr-primary);
+  color: var(--clr-fg);
+  border: 1px solid var(--clr-fg);
   position: relative;
   overflow: hidden;
   z-index: 1;
+  width: 70px;
+  height: 20px;
+  align-items: center;
 }
 
 .btn--outline:hover,
@@ -119,7 +124,7 @@ main {
   left: 0;
   top: 0;
   z-index: -1;
-  transition: right 0.2s ease-in-out;
+  transition: right .5s ease-in-out;
 }
 
 .btn--outline:hover:before,

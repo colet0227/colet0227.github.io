@@ -9,7 +9,7 @@ const header = {
 const about = {
 //   photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
-  name: 'Cole Thompson',
+  name: 'Cole',
   role: 'hey',
   description:
     'elopment.',
@@ -65,24 +65,19 @@ const experience = [
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
+  'Python',
+  'C++',
+  'Java',
+  'JavaScript',
   'HTML',
   'CSS',
-  'JavaScript',
-  'TypeScript',
-  'Express',
-  'MySQL',
-  'MongoDB',
+  'Swift',
   'React',
-  'Redux',
-  'SASS',
-  'Material UI',
   'Git',
-  'MERN',
-  'Java 8',
-  'Java Spring Boot',
-  'Microservices',
-  'Docker',
-  'Heroku'
+  'Visual Studio Code',
+  'Jupyter Notebook',
+  'Xcode',
+  'Vim'
 ]
 
 const contact = {

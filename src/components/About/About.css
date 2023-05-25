@@ -1,6 +1,7 @@
 .about {
     flex-direction: column;
     margin-top: 3em;
+    text-align: left;
   }
   
   .about__name {
