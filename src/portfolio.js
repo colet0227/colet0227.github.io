@@ -1,19 +1,20 @@
-// import aboutpic from "./components/Access/mePhoto.jpg"
+// import aboutpic from "./contexts/mePhoto.jpg"
+import res from "./contexts/Resume.pdf"
 
 const header = {
   // all the properties are optional - can be left empty or deleted
   homepage: 'https://colet0227.github.io/',
-  title: 'featured',
+  title: 'Home',
 }
 
 const about = {
 //   photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
   name: 'Cole',
-  role: 'hey',
+  role: 'Computer Science @ UC Irvine',
   description:
-    'elopment.',
-  resume: '',
+    'A budding software engineer keen on using coding skills to make people\'s lives better. Eager to create simple tech solutions that solve real-world problems and enhance everyday experiences.',
+  resume: res,
   social: {
     linkedin: 'google.com',
     github: 'google.com',
