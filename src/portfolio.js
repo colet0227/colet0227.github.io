@@ -1,4 +1,4 @@
-// import aboutpic from "./contexts/mePhoto.jpg"
+import aboutpic from "./contexts/Coder.JPG"
 import res from "./contexts/Resume.pdf"
 
 const header = {
@@ -8,16 +8,16 @@ const header = {
 }
 
 const about = {
-//   photo:aboutpic,
+  photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
   name: 'Cole',
   role: 'Computer Science @ UC Irvine',
   description:
-    'A budding software engineer keen on using coding skills to make people\'s lives better. Eager to create simple tech solutions that solve real-world problems and enhance everyday experiences.',
+    'A budding software engineer keen on using coding skills to make people\'s lives better. Eager to create simple tech solutions that solve real-world problems and enhance everyday experiences',
   resume: res,
   social: {
-    linkedin: 'google.com',
-    github: 'google.com',
+    linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
+    github: 'https://github.com/colet0227',
   },
 }
 

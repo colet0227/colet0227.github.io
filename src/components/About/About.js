@@ -4,21 +4,34 @@ import { about } from '../../portfolio'
 import './About.css'
 
 const About = () => {
-  const {photo,name, role, description, resume, social } = about
+  const {photo, name, role, description, resume, social} = about
 
   return (
     <div className='about center'>
-      {photo && (
-       <img height="200px" alt="Avatar placeholder" src={photo} />
-      )}
-      {name && (
-        <h1>
-          Hi, I'm <span className='about__name'>{name}.</span>
-        </h1>
-      )}
+      <div className='about__content'>
+        <div>
+          {name && (
+            <h1>
+              <span className="about__text">Hi, I'm</span> <span className='about__name'>{name}</span><span className="about__text">.</span>
+            </h1>
+          )}
 
-      {role && <h2 className='about__role'>{role}</h2>}
-      <p className='about__desc'>{description && description}</p>
+          {role && <h2 className='about__role'>{role}</h2>}
+          <div className='description-container'>
+            <p className='about__desc'>
+              {description && description}
+            </p>
+            <span className="typing-indicator"></span>
+          </div>
+        </div>
+
+        {photo && (
+          // <img className="about__image" alt="Avatar placeholder" src={photo} />
+          <div className='img-wrapper'>
+            <img alt="Avatar placeholder" src={photo} />
+          </div>
+        )}
+      </div>
 
       <div className='about__contact center'>
         {social && (
