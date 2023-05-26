@@ -25,18 +25,18 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'fcker',
+    name: 'Search Engine and Web Crawler',
     description:
-      'ftheir yeation. In addition, they can search the nearby theaters from where they currently are located.',
-    stack: ['localstorage', 'Openweather API', 'Google Map API','Movie Database API'],
+      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints and having a query response time under 300ms. Developed an indexer to create an inverted index for the corpus using stemming for better textual matches. The search leveraged tf-idf calculations and rankings based on relevance for a subset of the UCI web domain.',
+    stack: ['Visual Studio Code', 'Beautiful Soup', 'Python', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://colet0227.github.io/',
     livePreview: 'https://colet0227.github.io/',
   },
   {
-    name: 'Event Planner',
+    name: 'GUI Chat Application',
     description:
-      'Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.',
-    stack: ['swiper.js', 'npm', 'jawsdb','handlebars','express','nodejs'],
+      'Implemented a direct messaging module for a Digital Signal Processing (DSP) platform. The module features a user-friendly GUI via Tkinter, stores messages locally using filesystem insights, and allows real-time communication between users through socket programming.',
+    stack: ['IDLE', 'Python', 'Tkinter', 'Git'],
     sourceCode: 'https://colet0227.github.io/',
     livePreview: 'https://colet0227.github.io/',
   },
