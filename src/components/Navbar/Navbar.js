@@ -11,6 +11,15 @@ const Navbar = () => {
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
+  const smoothScrollTo = (id, event) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    toggleNavList();
+  };
+
   return (
     <nav className='center nav'>
       <ul
@@ -20,8 +29,8 @@ const Navbar = () => {
         {projects.length ? (
           <li className='nav__list-item'>
             <a
-              href='#Projects'
-              onClick={toggleNavList}
+              href='#projects'
+              onClick={(e) => smoothScrollTo('projects', e)}
               className='link link--nav'
             >
               Projects
@@ -32,8 +41,8 @@ const Navbar = () => {
         {skills.length ? (
           <li className='nav__list-item'>
             <a
-              href='#Skills'
-              onClick={toggleNavList}
+              href='#skills'
+              onClick={(e) => smoothScrollTo('skills', e)}
               className='link link--nav'
             >
               Skills
@@ -44,8 +53,8 @@ const Navbar = () => {
         {experience.length ? (
           <li className='nav__list-item'>
             <a
-              href='#Experience'
-              onClick={toggleNavList}
+              href='#experience'
+              onClick={(e) => smoothScrollTo('experience', e)}
               className='link link--nav'
             >
               Experience
@@ -56,8 +65,8 @@ const Navbar = () => {
         {contact.email ? (
           <li className='nav__list-item'>
             <a
-              href='#Contact'
-              onClick={toggleNavList}
+              href='#contact'
+              onClick={(e) => smoothScrollTo('contact', e)}
               className='link link--nav'
             >
               Contact

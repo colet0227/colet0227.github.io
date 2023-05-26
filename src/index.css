@@ -9,11 +9,11 @@
   font-size: inherit;
   box-shadow: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
   scroll-behavior: smooth;
-  overscroll-behavior: none;
 }
 
 h1,
