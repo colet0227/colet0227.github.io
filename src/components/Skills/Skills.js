@@ -2,7 +2,7 @@ import uniqid from 'uniqid'
 import { skills } from '../../portfolio'
 import './Skills.css'
 
-import { SiPython, SiCplusplus, SiJavascript, SiHtml5, SiCss3, SiSwift, SiReact, SiGit, SiVisualstudiocode, SiJupyter, SiXcode, SiVim } from "react-icons/si";
+import { SiPython, SiCplusplus, SiJavascript, SiHtml5, SiCss3, SiSwift, SiReact, SiGit, SiVisualstudiocode, SiJupyter, SiXcode, SiVim, SiFlask } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 
 const skillIcons = {
@@ -18,7 +18,8 @@ const skillIcons = {
   'Visual Studio Code': <SiVisualstudiocode size = {30}/>,
   'Jupyter Notebook': <SiJupyter size = {30}/>,
   Xcode: <SiXcode size = {30}/>,
-  Vim: <SiVim size = {30}/>
+  Vim: <SiVim size = {30}/>,
+  Flask: <SiFlask size = {30}/>
 };
 
 const Skills = () => {

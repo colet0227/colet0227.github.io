@@ -13,7 +13,7 @@ const about = {
   name: 'Cole',
   role: 'Computer Science @ UC Irvine',
   description:
-    'A budding software engineer keen on using coding skills to make people\'s lives better. Eager to create simple tech solutions that solve real-world problems and enhance everyday experiences',
+    'A budding software engineer keen on using coding skills to make people\'s lives better. Eager to create simple tech solutions that address real-life issues and enrich the quality of daily life',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
@@ -27,18 +27,26 @@ const projects = [
   {
     name: 'Search Engine and Web Crawler',
     description:
-      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints and having a query response time under 300ms. Developed an indexer to create an inverted index for the corpus using stemming for better textual matches. The search leveraged tf-idf calculations and rankings based on relevance for a subset of the UCI web domain.',
-    stack: ['Visual Studio Code', 'Beautiful Soup', 'Python', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
-    sourceCode: 'https://colet0227.github.io/',
-    livePreview: 'https://colet0227.github.io/',
+      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints and having a query response time under 300ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
+    stack: ['Visual Studio Code', 'Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
+    sourceCode: 'https://github.com/colet0227/Search_Engine',
+    livePreview: '',
   },
   {
     name: 'GUI Chat Application',
     description:
       'Implemented a direct messaging module for a Digital Signal Processing (DSP) platform. The module features a user-friendly GUI via Tkinter, stores messages locally using filesystem insights, and allows real-time communication between users through socket programming.',
     stack: ['IDLE', 'Python', 'Tkinter', 'Git'],
-    sourceCode: 'https://colet0227.github.io/',
-    livePreview: 'https://colet0227.github.io/',
+    sourceCode: 'https://github.com/colet0227/Messenger-App-Tkinter',
+    livePreview: '',
+  },
+  {
+    name: 'PlateMate',
+    description:
+      'Constructed a user-friendly recipe app @ Hack at UCI 2023 through the utilization of Edamam\'s Recipe Search API and Swift. Implemented backend services using Python and FastAPI for effective data handling and processing. Used Xcode as the primary tool for app development, debugging, and deployment on iOS devices.',
+    stack: ['Xcode', 'Swift', 'Python', 'Edamam API', 'FastAPI', 'Git'],
+    sourceCode: 'https://github.com/colet0227/PlateMate',
+    livePreview: 'https://devpost.com/software/platemate-3mdz2x',
   },
 ]
 
@@ -78,7 +86,8 @@ const skills = [
   'Visual Studio Code',
   'Jupyter Notebook',
   'Xcode',
-  'Vim'
+  'Vim',
+  'Flask'
 ]
 
 const contact = {
