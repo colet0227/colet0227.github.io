@@ -48,6 +48,14 @@ const projects = [
     sourceCode: 'https://github.com/colet0227/PlateMate',
     livePreview: 'https://devpost.com/software/platemate-3mdz2x',
   },
+  {
+    name: 'Z Marketplace',
+    description:
+      'Site in progress...',
+    stack: ['HTML'],
+    sourceCode: 'https://github.com/colet0227',
+    livePreview: '',
+  },
 ]
 
 const experience = [
