@@ -28,15 +28,23 @@ const projects = [
     name: 'Search Engine and Web Crawler',
     description:
       'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints and having a query response time under 300ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
-    stack: ['Visual Studio Code', 'Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
+    stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
+    livePreview: '',
+  },
+  {
+    name: 'Firecrest',
+    description:
+      'Developed a cutting-edge generative AI design dashboard which allows users to use different LLM models and select from various template outputs/browse popular topics for content generation. Leveraged PostgreSQL for efficient data management and utilizes OAuth 2.0 and 2FA for enhanced security and data protection. The project utilizes a diverse set of technologies such as Langchain, Open AI, PaLM, and Hugging Face for language model training and development.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
+    sourceCode: '',
     livePreview: '',
   },
   {
     name: 'GUI Chat Application',
     description:
       'Implemented a direct messaging module for a Digital Signal Processing (DSP) platform. The module features a user-friendly GUI via Tkinter, stores messages locally using filesystem insights, and allows real-time communication between users through socket programming.',
-    stack: ['IDLE', 'Python', 'Tkinter', 'Git'],
+    stack: ['Python', 'Tkinter', 'Git'],
     sourceCode: 'https://github.com/colet0227/Messenger-App-Tkinter',
     livePreview: '',
   },
@@ -44,18 +52,19 @@ const projects = [
     name: 'PlateMate',
     description:
       'Constructed a user-friendly recipe app @ Hack at UCI 2023 through the utilization of Edamam\'s Recipe Search API and Swift. Implemented backend services using Python and FastAPI for effective data handling and processing. Used Xcode as the primary tool for app development, debugging, and deployment on iOS devices.',
-    stack: ['Xcode', 'Swift', 'Python', 'Edamam API', 'FastAPI', 'Git'],
+    stack: ['Xcode', 'Swift', 'Python', 'FastAPI', 'Git'],
     sourceCode: 'https://github.com/colet0227/PlateMate',
     livePreview: 'https://devpost.com/software/platemate-3mdz2x',
   },
   {
-    name: 'Z Marketplace',
+    name: 'Ball Simulation',
     description:
-      'Site in progress...',
-    stack: ['HTML'],
-    sourceCode: 'https://github.com/colet0227',
+      'Designed and developed an interactive simulation application that allows users to create and manipulate a variety of unique objects, or "simultons", each exhibiting distinct behaviours and interactions. Features a rich suite of classes modeling diverse simultons, ranging from mobile entities like "Ball" and "Floater" to dynamic entities like "Pulsator" and "Hunter". Controlled via an intuitive interface, offering buttons for starting, stopping, and stepping through the simulation, placing objects, and removing objects.',
+    stack: ['Python', 'Tkinter', 'Git'],
+    sourceCode: 'https://github.com/colet0227/Ball-Simulation',
     livePreview: '',
   },
+  
 ]
 
 const experience = [
