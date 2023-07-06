@@ -38,7 +38,7 @@ const projects = [
       'Developed a cutting-edge generative AI design dashboard which allows users to use different LLM models and select from various template outputs/browse popular topics for content generation. Leveraged PostgreSQL for efficient data management and utilizes OAuth 2.0 and 2FA for enhanced security and data protection. The project utilizes a diverse set of technologies such as Langchain, Open AI, PaLM, and Hugging Face for language model training and development.',
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
-    livePreview: 'https://firecrestai.onrender.com/',
+    livePreview: 'https://firecrestai.com/',
   },
   {
     name: 'GUI Chat Application',
