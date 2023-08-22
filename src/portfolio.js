@@ -27,7 +27,7 @@ const projects = [
   {
     name: 'Search Engine and Web Crawler',
     description:
-      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints and having a query response time under 300ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
+      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 300ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
     stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
