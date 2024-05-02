@@ -1,10 +1,13 @@
 .project {
+  display: flex;
+  align-items: flex-start; /* Ensure top alignment */
+  justify-content: space-between; /* Keep items spaced out */
   padding: 2em;
   margin: 0 auto;
-  text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
   background-color: var(--clr-bg);
+  overflow: hidden; /* Hide any overflow */
 }
 
 .project:hover {
@@ -12,19 +15,21 @@
 }
 
 .project__description {
-  margin-top: 1em;
+  flex: 1; /* Gives text a flexible width, but not as wide as images */
+  text-align: left; /* Align text to the left */
+  margin-right: 20px; /* Space between text and image */
 }
 
 .project__stack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* Align stack items at the start */
   margin: 1.2em 0;
 }
 
 .project__stack-item {
-  line-height: .5;
-  margin: .75em;
+  line-height: 1.5; /* Improved readability */
+  margin: 0.75em; /* Consistent margin */
   font-weight: 500;
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
@@ -33,3 +38,50 @@
 .project .link--icon {
   margin-left: 0.5em;
 }
+
+.project__demo {
+  flex: 1; /* Gives the image area flexible width up to half of the container */
+  width: 50%; /* Explicitly define width to half of the container */
+  text-align: center; /* Center the image or video */
+}
+
+.project__demo img {
+  margin-top: 30px;
+  width: 100%; /* Full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 600px; /* Control maximum height */
+  border-radius: 10px;
+  border: .25px solid gray;
+}
+
+.project__dots {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+
+.project__demo.mobile-app img {
+  max-width: 30%; /* Keep the width adjustment for mobile app specific styling */
+  height: 300px; /* Ensure mobile app images also have the same height */
+  object-fit: cover; /* Adjusts the content of the image to fit the container */
+}
+
+
+.project__demo.mobile-app {
+  align-self: center; /* Center the demo in the container */
+}
+

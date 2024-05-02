@@ -1,5 +1,17 @@
 import aboutpic from "./contexts/updated.jpeg"
 import res from "./contexts/Resume.pdf"
+import firecrest1 from "./contexts/firecrest1.png"
+import firecrest2 from "./contexts/firecrest2.png"
+import firecrest3 from "./contexts/firecrest3.png"
+import firecrest4 from "./contexts/firecrest4.png"
+import search1 from "./contexts/search1.png"
+import search2 from "./contexts/search2.png"
+import chat1 from "./contexts/chat1.png"
+import chat2 from "./contexts/chat2.png"
+import chat3 from "./contexts/chat3.png"
+import plate1 from "./contexts/plate1.png"
+import plate2 from "./contexts/plate2.png"
+import ball1 from "./contexts/ball1.png"
 
 const header = {
   // all the properties are optional - can be left empty or deleted
@@ -27,10 +39,14 @@ const projects = [
   {
     name: 'Search Engine and Web Crawler',
     description:
-      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 300ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
+      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 100ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
     stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
+    images: [
+      search1,
+      search2
+    ]
   },
   {
     name: 'Firecrest',
@@ -39,6 +55,12 @@ const projects = [
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
     livePreview: 'https://firecrestai.com/',
+    images: [
+      firecrest1,
+      firecrest2,
+      firecrest3,
+      firecrest4
+    ]
   },
   {
     name: 'GUI Chat Application',
@@ -47,6 +69,11 @@ const projects = [
     stack: ['Python', 'Tkinter', 'Git'],
     sourceCode: 'https://github.com/colet0227/Messenger-App-Tkinter',
     livePreview: '',
+    images: [
+      chat1,
+      chat2,
+      chat3
+    ]
   },
   {
     name: 'PlateMate',
@@ -55,6 +82,10 @@ const projects = [
     stack: ['Xcode', 'Swift', 'Python', 'FastAPI', 'Git'],
     sourceCode: 'https://github.com/colet0227/PlateMate',
     livePreview: 'https://devpost.com/software/platemate-3mdz2x',
+    images: [
+      plate1,
+      plate2
+    ]
   },
   {
     name: 'Ball Simulation',
@@ -63,6 +94,9 @@ const projects = [
     stack: ['Python', 'Tkinter', 'Git'],
     sourceCode: 'https://github.com/colet0227/Ball-Simulation',
     livePreview: '',
+    images: [
+      ball1
+    ]
   },
   
 ]
