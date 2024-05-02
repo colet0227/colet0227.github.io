@@ -1,15 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.896b4ec7.css",
-    "main.js": "/static/js/main.6eee2cc0.js",
+    "main.css": "/static/css/main.fa44481f.css",
+    "main.js": "/static/js/main.0a5ddbce.js",
     "static/media/updated.jpeg": "/static/media/updated.70fae11a82b99bcb54a9.jpeg",
-    "static/media/Resume.pdf": "/static/media/Resume.3cd6165283963866dd4d.pdf",
+    "static/media/ball1.png": "/static/media/ball1.7c508577df4b2aa12e4e.png",
+    "static/media/chat2.png": "/static/media/chat2.cdd9b524359623210fbc.png",
+    "static/media/chat1.png": "/static/media/chat1.e7880a5f3f9f9aba3f40.png",
+    "static/media/chat3.png": "/static/media/chat3.97548af4c8a19382805c.png",
+    "static/media/firecrest3.png": "/static/media/firecrest3.aa126a1c68013478db52.png",
+    "static/media/firecrest2.png": "/static/media/firecrest2.410951f4254b16b3dbb9.png",
+    "static/media/firecrest4.png": "/static/media/firecrest4.6ea094541daf5b88ef63.png",
+    "static/media/search2.png": "/static/media/search2.12435393c3b64423b6ee.png",
+    "static/media/plate1.png": "/static/media/plate1.33bd6622120964b07373.png",
+    "static/media/search1.png": "/static/media/search1.70ce5a81b97bbda35d0e.png",
+    "static/media/firecrest1.png": "/static/media/firecrest1.52d6a4b82cdd7872ef54.png",
+    "static/media/Resume.pdf": "/static/media/Resume.f51daadc0bcd42495de4.pdf",
+    "static/media/plate2.png": "/static/media/plate2.c170024de4e3e6b13788.png",
     "index.html": "/index.html",
-    "main.896b4ec7.css.map": "/static/css/main.896b4ec7.css.map",
-    "main.6eee2cc0.js.map": "/static/js/main.6eee2cc0.js.map"
+    "main.fa44481f.css.map": "/static/css/main.fa44481f.css.map",
+    "main.0a5ddbce.js.map": "/static/js/main.0a5ddbce.js.map"
   },
   "entrypoints": [
-    "static/css/main.896b4ec7.css",
-    "static/js/main.6eee2cc0.js"
+    "static/css/main.fa44481f.css",
+    "static/js/main.0a5ddbce.js"
   ]
 }
