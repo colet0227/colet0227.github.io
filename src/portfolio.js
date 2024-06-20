@@ -6,12 +6,19 @@ import firecrest3 from "./contexts/firecrest3.png"
 import firecrest4 from "./contexts/firecrest4.png"
 import search1 from "./contexts/search1.png"
 import search2 from "./contexts/search2.png"
-import chat1 from "./contexts/chat1.png"
-import chat2 from "./contexts/chat2.png"
-import chat3 from "./contexts/chat3.png"
-import plate1 from "./contexts/plate1.png"
-import plate2 from "./contexts/plate2.png"
-import ball1 from "./contexts/ball1.png"
+// import chat1 from "./contexts/chat1.png"
+// import chat2 from "./contexts/chat2.png"
+// import chat3 from "./contexts/chat3.png"
+// import plate1 from "./contexts/plate1.png"
+// import plate2 from "./contexts/plate2.png"
+// import ball1 from "./contexts/ball1.png"
+import fabflix1 from "./contexts/fabflix1.png"
+import fabflix2 from "./contexts/fabflix2.png"
+import fabflix3 from "./contexts/fabflix3.png"
+import fabflix4 from "./contexts/fabflix4.png"
+import fabflix5 from "./contexts/fabflix5.png"
+import fabflix6 from "./contexts/fabflix6.png"
+import fabflix7 from "./contexts/fabflix7.png"
 
 const header = {
   // all the properties are optional - can be left empty or deleted
@@ -37,18 +44,6 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'Search Engine and Web Crawler',
-    description:
-      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 100ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
-    stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
-    sourceCode: 'https://github.com/colet0227/Search_Engine',
-    livePreview: '',
-    images: [
-      search1,
-      search2
-    ]
-  },
-  {
     name: 'Firecrest',
     description:
       'Developed a cutting-edge generative AI design dashboard which allows users to use different LLM models and select from various template outputs/browse popular topics for content generation. Leveraged PostgreSQL for efficient data management and utilizes OAuth 2.0 and 2FA for enhanced security and data protection. The project utilizes a diverse set of technologies such as Langchain, Open AI, PaLM, and Hugging Face for language model training and development.',
@@ -62,42 +57,56 @@ const projects = [
       firecrest4
     ]
   },
+
   {
-    name: 'GUI Chat Application',
+    name: 'Search Engine and Web Crawler',
     description:
-      'Implemented a direct messaging module for a Digital Signal Processing (DSP) platform. The module features a user-friendly GUI via Tkinter, stores messages locally using filesystem insights, and allows real-time communication between users through socket programming.',
-    stack: ['Python', 'Tkinter', 'Git'],
-    sourceCode: 'https://github.com/colet0227/Messenger-App-Tkinter',
+      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 100ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
+    stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
+    sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
     images: [
-      chat1,
-      chat2,
-      chat3
+      search1,
+      search2
     ]
   },
-  {
-    name: 'PlateMate',
-    description:
-      'Constructed a user-friendly recipe app @ Hack at UCI 2023 through the utilization of Edamam\'s Recipe Search API and Swift. Implemented backend services using Python and FastAPI for effective data handling and processing. Used Xcode as the primary tool for app development, debugging, and deployment on iOS devices.',
-    stack: ['Xcode', 'Swift', 'Python', 'FastAPI', 'Git'],
-    sourceCode: 'https://github.com/colet0227/PlateMate',
-    livePreview: 'https://devpost.com/software/platemate-3mdz2x',
-    images: [
-      plate1,
-      plate2
-    ]
-  },
-  {
-    name: 'Ball Simulation',
-    description:
-      'Designed and developed an interactive simulation application that allows users to create and manipulate a variety of unique objects, or "simultons", each exhibiting distinct behaviours and interactions. Features a rich suite of classes modeling diverse simultons, ranging from mobile entities like "Ball" and "Floater" to dynamic entities like "Pulsator" and "Hunter". Controlled via an intuitive interface, offering buttons for starting, stopping, and stepping through the simulation, placing objects, and removing objects.',
-    stack: ['Python', 'Tkinter', 'Git'],
-    sourceCode: 'https://github.com/colet0227/Ball-Simulation',
-    livePreview: '',
-    images: [
-      ball1
-    ]
-  },
+  
+  // {
+  //   name: 'GUI Chat Application',
+  //   description:
+  //     'Implemented a direct messaging module for a Digital Signal Processing (DSP) platform. The module features a user-friendly GUI via Tkinter, stores messages locally using filesystem insights, and allows real-time communication between users through socket programming.',
+  //   stack: ['Python', 'Tkinter', 'Git'],
+  //   sourceCode: 'https://github.com/colet0227/Messenger-App-Tkinter',
+  //   livePreview: '',
+  //   images: [
+  //     chat1,
+  //     chat2,
+  //     chat3
+  //   ]
+  // },
+  // {
+  //   name: 'PlateMate',
+  //   description:
+  //     'Constructed a user-friendly recipe app @ Hack at UCI 2023 through the utilization of Edamam\'s Recipe Search API and Swift. Implemented backend services using Python and FastAPI for effective data handling and processing. Used Xcode as the primary tool for app development, debugging, and deployment on iOS devices.',
+  //   stack: ['Xcode', 'Swift', 'Python', 'FastAPI', 'Git'],
+  //   sourceCode: 'https://github.com/colet0227/PlateMate',
+  //   livePreview: 'https://devpost.com/software/platemate-3mdz2x',
+  //   images: [
+  //     plate1,
+  //     plate2
+  //   ]
+  // },
+  // {
+  //   name: 'Ball Simulation',
+  //   description:
+  //     'Designed and developed an interactive simulation application that allows users to create and manipulate a variety of unique objects, or "simultons", each exhibiting distinct behaviours and interactions. Features a rich suite of classes modeling diverse simultons, ranging from mobile entities like "Ball" and "Floater" to dynamic entities like "Pulsator" and "Hunter". Controlled via an intuitive interface, offering buttons for starting, stopping, and stepping through the simulation, placing objects, and removing objects.',
+  //   stack: ['Python', 'Tkinter', 'Git'],
+  //   sourceCode: 'https://github.com/colet0227/Ball-Simulation',
+  //   livePreview: '',
+  //   images: [
+  //     ball1
+  //   ]
+  // },
   
 ]
 
