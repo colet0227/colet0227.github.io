@@ -1,21 +1,46 @@
 import uniqid from 'uniqid';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import { useState } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import './ProjectContainer.css';
 
 const ProjectContainer = ({ project }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const projectRef = useRef(null);
 
   const handleDotClick = (index) => {
     setCurrentImage(index);
   };
 
+  const handleKeyDown = useCallback((event) => {
+    if (event.key === 'ArrowRight') {
+      setCurrentImage((prevIndex) => (prevIndex + 1) % project.images.length);
+    } else if (event.key === 'ArrowLeft') {
+      setCurrentImage((prevIndex) => (prevIndex - 1 + project.images.length) % project.images.length);
+    }
+  }, [project.images.length]);
+
+  useEffect(() => {
+    const projectElement = projectRef.current;
+    if (projectElement) {
+      projectElement.addEventListener('keydown', handleKeyDown);
+    }
+    return () => {
+      if (projectElement) {
+        projectElement.removeEventListener('keydown', handleKeyDown);
+      }
+    };
+  }, [handleKeyDown]);
+
   // Determine if the project is 'PlateMate'
   const isMobileApp = project.name === 'PlateMate';
 
   return (
-    <div className='project'>
+    <div
+      className='project'
+      tabIndex="0"
+      ref={projectRef}
+    >
       <div className='project__description'>
         <h3>{project.name}</h3>
         <p>{project.description}</p>

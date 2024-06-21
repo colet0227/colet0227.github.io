@@ -5,4 +5,11 @@
   display: grid;
   grid-template-columns: 1fr; /* One column layout */
   grid-gap: 2em;
+  text-align: left;
+}
+
+.project_description {
+  /* center but only if the html tag is type p*/
+  margin-top: 50px;
+  text-align: center;
 }

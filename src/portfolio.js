@@ -70,6 +70,25 @@ const projects = [
       search2
     ]
   },
+
+  {
+    name: 'Fabflix',
+    description:
+      'Developed a comprehensive movie web application allowing users to browse, search, and purchase from a large catalog of popular movies. Built from the ground up, including setting up AWS EC2 for scalable compute resources, MySQL for efficient data management, Tomcat for web server deployment, and Maven for project management and build automation. Incorporated HTTPS for secure communication, reCAPTCHA for bot protection, and password encryption for enhanced security. Deployed using Docker containers on an AWS-based Kubernetes cluster and leveraged JMeter for performance testing, achieving a 25% improvement in database performance through MySQL connection pooling.',
+    stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX', 'MySQL', 'Tomcat', 'Docker', 'Kubernetes', 'JMeter', 'AWS', 'Git', 'Maven'],
+    sourceCode: '',
+    livePreview: 'https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH',
+    images: [
+      fabflix1,
+      fabflix2,
+      fabflix3,
+      fabflix4,
+      fabflix5,
+      fabflix6,
+      fabflix7
+    ]
+  }
+  
   
   // {
   //   name: 'GUI Chat Application',
@@ -111,44 +130,60 @@ const projects = [
 ]
 
 const experience = [
-  // projects can be added an removed
-  // if there are no projects, Projects section won't show up
   {
-    name: 'fcker',
-    description:
-      'ftheir yeation. In addition, they can search the nearby theaters from where they currently are located.',
-    stack: ['localstorage', 'Openweather API', 'Google Map API','Movie Database API'],
-    sourceCode: 'https://colet0227.github.io/',
-    livePreview: 'https://colet0227.github.io/',
+    name: 'AfterFlea OS',
+    description: 'January 2024 - April 2024',
+    position: 'Software Engineer Intern',
+    bullets: [
+      'Revamped the landing page using React and JavaScript, improving visual appeal and user engagement.',
+      'Enhanced messaging functionality with MongoDB, supporting over 200 user personas and improving message delivery and display.',
+      'Streamlined the signup and login workflow for a smoother user experience, resulting in higher user registrations.',
+      'Utilized Docker to improve development workflows, achieving a 20% increase in deployment efficiency.',
+      'Created detailed mockups for the user feed feature in Figma, facilitating early user testing and guiding development towards a user-centric design.'
+    ],
+    stack: [],
+    sourceCode: '',
+    livePreview: '',
   },
   {
-    name: 'Event Planner',
-    description:
-      'Event Planner was designed with the partier in mind, the one who wants to find fine dinning or a friend to have a good time. Event Planner is the easiest way for anyone to find an event to attend, create or host your own event or browse whats happening in your local area.',
-    stack: ['swiper.js', 'npm', 'jawsdb','handlebars','express','nodejs'],
-    sourceCode: 'https://colet0227.github.io/',
-    livePreview: 'https://colet0227.github.io/',
-  },
-]
+    name: 'University of California, Irvine',
+    description: 'January 2023 - June 2023',
+    position: 'ICS Lab Assistant',
+    bullets: [
+      'Tutored and supported 50+ students in building programs for various problems and computing environments using Python.',
+      'Guided students in leveraging library modules for applications including graphics, databases, web APIs, networks, and sockets.'
+    ],
+    stack: [],
+    sourceCode: '',
+    livePreview: '',
+  }
+];
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
   'Python',
-  'C++',
-  'Java',
   'JavaScript',
-  'HTML',
-  'CSS',
-  'Swift',
-  'React',
+  'Java',
+  'C/C++',
+  'HTML/CSS',
+  'SQL',
   'Git',
-  'Visual Studio Code',
-  'Jupyter Notebook',
-  'Xcode',
   'Vim',
-  'Flask'
-]
+  'Linux',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  // 'Maven',
+  'Tomcat',
+  'Figma',
+  'React',
+  'Flask',
+  // 'Node.js',
+  'Express.js',
+  'MongoDB',
+  'PostgreSQL',
+  'MySQL'
+];
+
 
 const contact = {
   // email is optional - if left empty Contact section won't show up

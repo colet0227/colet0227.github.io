@@ -1,0 +1,48 @@
+
+
+.experience__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+    color: gray;
+  }
+
+  
+  .experience__date {
+    font-size: 1rem;
+    color: gray;
+  }
+  
+  .experience__position {
+    font-size: 1rem;
+    color: gray;
+    text-align: right;
+  }
+  
+  .experience__bullets {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .experience__bullet {
+    font-size: 1rem;
+    color: var(--clr-fg);
+    margin-bottom: 0.5em;
+  }
+  
+  .experience__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  .experience__stack-item {
+    background-color: var(--clr-bg-alt);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: var(--clr-fg-alt);
+  }
+  

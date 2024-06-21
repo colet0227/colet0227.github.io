@@ -2,24 +2,33 @@ import uniqid from 'uniqid'
 import { skills } from '../../portfolio'
 import './Skills.css'
 
-import { SiPython, SiCplusplus, SiJavascript, SiHtml5, SiCss3, SiSwift, SiReact, SiGit, SiVisualstudiocode, SiJupyter, SiXcode, SiVim, SiFlask } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
+import { SiApachetomcat, SiPython, SiCplusplus, SiJavascript, SiHtml5, SiReact, SiGit, SiVim, SiFlask, SiDocker, SiKubernetes, SiAmazonaws, SiMysql, SiPostgresql, SiMongodb, SiExpress } from "react-icons/si";
 import { DiJava } from "react-icons/di";
+import { FaLinux } from "react-icons/fa"; // Alternative icons
 
 const skillIcons = {
-  Python: <SiPython size = {30}/>,
-  'C++': <SiCplusplus size = {30}/>,
-  Java: <DiJava size = {30}/>,
-  JavaScript: <SiJavascript size = {30}/>,
-  HTML: <SiHtml5 size = {30}/>,
-  CSS: <SiCss3 size = {30}/>,
-  Swift: <SiSwift size = {30}/>,
-  React: <SiReact size = {30}/>,
-  Git: <SiGit size = {30}/>,
-  'Visual Studio Code': <SiVisualstudiocode size = {30}/>,
-  'Jupyter Notebook': <SiJupyter size = {30}/>,
-  Xcode: <SiXcode size = {30}/>,
-  Vim: <SiVim size = {30}/>,
-  Flask: <SiFlask size = {30}/>
+  Python: <SiPython size={35} />,
+  'C/C++': <SiCplusplus size={35} />,
+  Java: <DiJava size={35} />,
+  JavaScript: <SiJavascript size={35} />,
+  'HTML/CSS': <SiHtml5 size={35} />,
+  SQL: <SiMysql size={35} />, // Using MySQL icon for SQL
+  Git: <SiGit size={35} />,
+  Vim: <SiVim size={35} />,
+  Linux: <FaLinux size={35} />, // Using FaLinux for Linux
+  Docker: <SiDocker size={35} />,
+  Kubernetes: <SiKubernetes size={35} />,
+  AWS: <SiAmazonaws size={35} />,
+  Tomcat: <SiApachetomcat size={35} />, // Using FaServer as an alternative for Tomcat
+  Figma: <FaFigma size={35} />, // Using FaDraftingCompass as an alternative for Figma
+  React: <SiReact size={35} />,
+  Flask: <SiFlask size={35} />,
+  // 'Node.js': <SiNodeDotJs size={35} />,
+  'Express.js': <SiExpress size={35} />,
+  MongoDB: <SiMongodb size={35} />,
+  PostgreSQL: <SiPostgresql size={35} />,
+  MySQL: <SiMysql size={35} />
 };
 
 const Skills = () => {

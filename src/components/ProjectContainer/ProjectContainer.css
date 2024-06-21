@@ -6,8 +6,13 @@
   margin: 0 auto;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
-  background-color: var(--clr-bg);
+  background-color: var(--clr-bg-alt);
   overflow: hidden; /* Hide any overflow */
+  outline: none; /* Remove focus outline */
+}
+
+.project:focus {
+  outline: none; /* Ensure focus outline is removed */
 }
 
 .project:hover {
@@ -73,15 +78,12 @@
   background-color: #717171;
 }
 
-
 .project__demo.mobile-app img {
   max-width: 30%; /* Keep the width adjustment for mobile app specific styling */
   height: 300px; /* Ensure mobile app images also have the same height */
   object-fit: cover; /* Adjusts the content of the image to fit the container */
 }
 
-
 .project__demo.mobile-app {
   align-self: center; /* Center the demo in the container */
 }
-

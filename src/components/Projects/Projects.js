@@ -16,6 +16,10 @@ const Projects = () => {
           <ProjectContainer key={uniqid()} project={project} />
         ))}
       </div>
+      <div className='project_description'>
+        {/* i only want the following p to be center text aligned */}
+        <p>Look for more projects on my Github!</p>
+      </div>
     </section>
   )
 }
