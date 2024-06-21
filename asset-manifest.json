@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa44481f.css",
-    "main.js": "/static/js/main.0a5ddbce.js",
+    "main.css": "/static/css/main.344cb0c7.css",
+    "main.js": "/static/js/main.425b133e.js",
     "static/media/updated.jpeg": "/static/media/updated.70fae11a82b99bcb54a9.jpeg",
-    "static/media/ball1.png": "/static/media/ball1.7c508577df4b2aa12e4e.png",
-    "static/media/chat2.png": "/static/media/chat2.cdd9b524359623210fbc.png",
-    "static/media/chat1.png": "/static/media/chat1.e7880a5f3f9f9aba3f40.png",
-    "static/media/chat3.png": "/static/media/chat3.97548af4c8a19382805c.png",
+    "static/media/fabflix3.png": "/static/media/fabflix3.7ddf4caeedf0bf8d1db3.png",
     "static/media/firecrest3.png": "/static/media/firecrest3.aa126a1c68013478db52.png",
     "static/media/firecrest2.png": "/static/media/firecrest2.410951f4254b16b3dbb9.png",
     "static/media/firecrest4.png": "/static/media/firecrest4.6ea094541daf5b88ef63.png",
+    "static/media/fabflix2.png": "/static/media/fabflix2.90676307583585d0f9e7.png",
     "static/media/search2.png": "/static/media/search2.12435393c3b64423b6ee.png",
-    "static/media/plate1.png": "/static/media/plate1.33bd6622120964b07373.png",
+    "static/media/fabflix4.png": "/static/media/fabflix4.aa29d96cb43504b1d2a6.png",
+    "static/media/fabflix7.png": "/static/media/fabflix7.9c79ff6ac56dabca9e1f.png",
     "static/media/search1.png": "/static/media/search1.70ce5a81b97bbda35d0e.png",
+    "static/media/fabflix5.png": "/static/media/fabflix5.845dc512751d1cade264.png",
     "static/media/firecrest1.png": "/static/media/firecrest1.52d6a4b82cdd7872ef54.png",
-    "static/media/Resume.pdf": "/static/media/Resume.f51daadc0bcd42495de4.pdf",
-    "static/media/plate2.png": "/static/media/plate2.c170024de4e3e6b13788.png",
+    "static/media/fabflix1.png": "/static/media/fabflix1.05dfed41f8fc1100d1a8.png",
+    "static/media/fabflix6.png": "/static/media/fabflix6.44d2a33e821c59135c7b.png",
+    "static/media/Resume.pdf": "/static/media/Resume.b92b517eb2e69d352d0b.pdf",
     "index.html": "/index.html",
-    "main.fa44481f.css.map": "/static/css/main.fa44481f.css.map",
-    "main.0a5ddbce.js.map": "/static/js/main.0a5ddbce.js.map"
+    "main.344cb0c7.css.map": "/static/css/main.344cb0c7.css.map",
+    "main.425b133e.js.map": "/static/js/main.425b133e.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa44481f.css",
-    "static/js/main.0a5ddbce.js"
+    "static/css/main.344cb0c7.css",
+    "static/js/main.425b133e.js"
   ]
 }
