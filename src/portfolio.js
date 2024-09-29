@@ -19,6 +19,9 @@ import fabflix4 from "./contexts/fabflix4.png"
 import fabflix5 from "./contexts/fabflix5.png"
 import fabflix6 from "./contexts/fabflix6.png"
 import fabflix7 from "./contexts/fabflix7.png"
+import connekt1 from "./contexts/connekt1.png"
+import connekt2 from "./contexts/connekt2.png"
+import connekt3 from "./contexts/connekt3.png"
 
 const header = {
   // all the properties are optional - can be left empty or deleted
@@ -59,19 +62,6 @@ const projects = [
   },
 
   {
-    name: 'Search Engine and Web Crawler',
-    description:
-      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 100ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
-    stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
-    sourceCode: 'https://github.com/colet0227/Search_Engine',
-    livePreview: '',
-    images: [
-      search1,
-      search2
-    ]
-  },
-
-  {
     name: 'Fabflix',
     description:
       'Developed a comprehensive movie web application allowing users to browse, search, and purchase from a large catalog of popular movies. Built from the ground up, including setting up AWS EC2 for scalable compute resources, MySQL for efficient data management, Tomcat for web server deployment, and Maven for project management and build automation. Incorporated HTTPS for secure communication, reCAPTCHA for bot protection, and password encryption for enhanced security. Deployed using Docker containers on an AWS-based Kubernetes cluster and leveraged JMeter for performance testing, achieving a 25% improvement in database performance through MySQL connection pooling.',
@@ -86,6 +76,33 @@ const projects = [
       fabflix5,
       fabflix6,
       fabflix7
+    ]
+  },
+
+  {
+    name: 'Search Engine and Web Crawler',
+    description:
+      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 100ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
+    stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
+    sourceCode: 'https://github.com/colet0227/Search_Engine',
+    livePreview: '',
+    images: [
+      search1,
+      search2
+    ]
+  },
+
+  {
+    name: 'Connekt',
+    description:
+      'Currently in the process of developing a fitness community app that connects users with similar fitness goals, leveraging React for the frontend and Flask/Python for the backend. The app is deployed on Render, with PostgreSQL handling efficient data management. The app will feature a user-friendly interface, allowing users to create and join fitness groups, track their progress, and share their achievements with their gym community - I\'ll keep you updated!',
+    stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'Render', 'Git'],
+    sourceCode: '',
+    // livePreview: 'https://firecrestai.com/',
+    images: [
+      connekt1,
+      connekt2,
+      connekt3,
     ]
   }
   
