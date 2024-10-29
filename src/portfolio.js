@@ -152,11 +152,11 @@ const experience = [
     description: 'January 2024 - April 2024',
     position: 'Software Engineer Intern',
     bullets: [
-      'Revamped the landing page using React and JavaScript, improving visual appeal and user engagement.',
-      'Enhanced messaging functionality with MongoDB, supporting over 200 user personas and improving message delivery and display.',
-      'Streamlined the signup and login workflow for a smoother user experience, resulting in higher user registrations.',
-      'Utilized Docker to improve development workflows, achieving a 20% increase in deployment efficiency.',
-      'Created detailed mockups for the user feed feature in Figma, facilitating early user testing and guiding development towards a user-centric design.'
+      'Leveraged React and JavaScript to redesign the landing page, boosting user engagement by 30% as reflected in new waitlist sign-ups.',
+      'Developed RESTful API routes using Express and integrated MongoDB to enhance messaging functionality, supporting seamless communication for 100+ user personas.',
+      'Created detailed mockups via Figma for the platform’s user feed feature and gathered feedback from early testers, incorporating suggestions to create a more user-centric design.',
+      // 'Utilized Docker to improve development workflows, achieving a 20% increase in deployment efficiency.',
+      // 'Created detailed mockups for the user feed feature in Figma, facilitating early user testing and guiding development towards a user-centric design.'
     ],
     stack: [],
     sourceCode: '',
