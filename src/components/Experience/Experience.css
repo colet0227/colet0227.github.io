@@ -1,48 +1,203 @@
+.experience__timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.experience__timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px; /* Reduced width for a cleaner line */
+  background-color: var(--clr-primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centers the line more precisely */
+}
 
-.experience__header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5em;
-    color: gray;
+.experience__item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.experience__item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: var(--clr-bg);
+  border: 4px solid var(--clr-primary);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid var(--clr-bg-alt);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--clr-bg-alt);
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid var(--clr-bg-alt);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--clr-bg-alt) transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.experience__content {
+  padding: 20px 30px;
+  background-color: var(--clr-bg-alt);
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.experience__icon {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.experience__name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--clr-primary);
+}
+
+.experience__position {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.experience__date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--clr-fg-alt);
+  margin-bottom: 1rem;
+}
+
+.experience__bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.experience__bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience__bullet svg {
+  color: var(--clr-primary);
+  margin-top: 5px;
+}
+
+.experience__stack {
+  margin-top: 1rem;
+}
+
+.experience__stack h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience__stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.experience__stack-item {
+  background-color: var(--clr-bg);
+  color: var(--clr-fg);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.experience__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.link--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link--icon:hover {
+  color: var(--clr-fg);
+}
+
+@media screen and (max-width: 768px) {
+  .experience__timeline::after {
+    left: 31px;
+  }
+  
+  .experience__item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .experience__item::before {
+    left: 60px;
+    border: medium solid var(--clr-bg-alt);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--clr-bg-alt) transparent transparent;
   }
 
-  
-  .experience__date {
-    font-size: 1rem;
-    color: gray;
+  .left::after, .right::after {
+    left: 15px;
   }
-  
-  .experience__position {
-    font-size: 1rem;
-    color: gray;
-    text-align: right;
+
+  .right {
+    left: 0%;
   }
-  
-  .experience__bullets {
-    list-style-type: disc;
-    padding-left: 1.5em;
-    margin-bottom: 1em;
-  }
-  
-  .experience__bullet {
-    font-size: 1rem;
-    color: var(--clr-fg);
-    margin-bottom: 0.5em;
-  }
-  
-  .experience__stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    margin-bottom: 1em;
-  }
-  
-  .experience__stack-item {
-    background-color: var(--clr-bg-alt);
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    color: var(--clr-fg-alt);
-  }
-  
+}
