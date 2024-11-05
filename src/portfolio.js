@@ -44,68 +44,67 @@ const about = {
 }
 
 const projects = [
-  // projects can be added an removed
-  // if there are no projects, Projects section won't show up
   {
     name: 'Firecrest',
-    description:
-      'Developed a cutting-edge generative AI design dashboard which allows users to use different LLM models and select from various template outputs/browse popular topics for content generation. Leveraged PostgreSQL for efficient data management and utilizes OAuth 2.0 and 2FA for enhanced security and data protection. The project utilizes a diverse set of technologies such as Langchain, Open AI, PaLM, and Hugging Face for language model training and development.',
+    description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
+    bullets: [
+      'Developed a generative AI design dashboard for content generation with various LLM model selections.',
+      'Implemented PostgreSQL for data management, OAuth 2.0, and 2FA for security.',
+      'Integrated tools like LangChain, OpenAI, PaLM, and Hugging Face for model training.',
+      'Built with a stack including HTML, CSS, JavaScript, SQL, Python, React, Flask, and PostgreSQL.'
+    ],
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
     livePreview: 'https://firecrestai.com/',
-    images: [
-      firecrest1,
-      firecrest2,
-      firecrest3,
-      firecrest4
-    ]
+    images: [firecrest1, firecrest2, firecrest3, firecrest4]
   },
 
   {
     name: 'Fabflix',
-    description:
-      'Developed a comprehensive movie web application allowing users to browse, search, and purchase from a large catalog of popular movies. Built from the ground up, including setting up AWS EC2 for scalable compute resources, MySQL for efficient data management, Tomcat for web server deployment, and Maven for project management and build automation. Incorporated HTTPS for secure communication, reCAPTCHA for bot protection, and password encryption for enhanced security. Deployed using Docker containers on an AWS-based Kubernetes cluster and leveraged JMeter for performance testing, achieving a 25% improvement in database performance through MySQL connection pooling.',
+    description: 'Effortlessly browse, search, and buy movies on this secure, high-performance web platform.',
+    bullets: [
+      'Created a movie web application for browsing, searching, and purchasing movies.',
+      'Utilized AWS EC2, MySQL, Tomcat, Maven, and Docker for scalable and secure deployment.',
+      'Implemented HTTPS, reCAPTCHA, and password encryption for enhanced security.',
+      'Improved database performance by 25% using MySQL connection pooling.',
+      'Deployed on an AWS-based Kubernetes cluster and tested with JMeter.'
+    ],
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX', 'MySQL', 'Tomcat', 'Docker', 'Kubernetes', 'JMeter', 'AWS', 'Git', 'Maven'],
     sourceCode: '',
     livePreview: 'https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH',
-    images: [
-      fabflix1,
-      fabflix2,
-      fabflix3,
-      fabflix4,
-      fabflix5,
-      fabflix6,
-      fabflix7
-    ]
+    images: [fabflix1, fabflix2, fabflix3, fabflix4, fabflix5, fabflix6, fabflix7]
   },
 
   {
     name: 'Search Engine and Web Crawler',
-    description:
-      'Designed a custom web search engine with the ability to handle 50,000+ documents under harsh operational constraints while maintaining a query response time under 100ms. Incorporated partial indexing to save memory usage and leveraged the Snowball Stemmer for better textual matches. Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags. Used sim-hashing to detect near duplicate pages.',
+    description: 'Quickly access precise information across UC Irvine’s computer science subdomain with this tailored, high-performance search engine.',
+    bullets: [
+      'Designed a custom web search engine with the ability to handle 50,000+ documents and reduced average query response time to under 100ms by indexing token positions',
+      'Incorporated partial indexing to save > 80% memory usage and made use of the Snowball Stemmer for better textual matches',
+      'Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags',
+      'Created targeted sim-hashing function with blake2b to detect and eliminate near duplicate pages',
+      'Integrate extensive web crawling trap detection including high information content, URL depth, correct files types, and more',
+      'Used Flask to prop up a user-friendly web interface'
+    ],
     stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
-    images: [
-      search1,
-      search2
-    ]
+    images: [search1, search2]
   },
 
   {
     name: 'Connekt',
-    description:
-      'Currently in the process of developing a fitness community app that connects users with similar fitness goals, leveraging React for the frontend and Flask/Python for the backend. The app is deployed on Render, with PostgreSQL handling efficient data management. The app will feature a user-friendly interface, allowing users to create and join fitness groups, track their progress, and share their achievements with their gym community - I\'ll keep you updated!',
+    description: 'Connect, track, and achieve together—a fitness community app for group support and shared progress.',
+    bullets: [
+      'Currently developing a fitness community app with React frontend and Flask/Python backend.',
+      'Enables users to create/join groups, track progress, and share achievements.',
+      'Deployed on Render with PostgreSQL for data management.',
+      'Designed to foster a supportive gym and fitness community experience.'
+    ],
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'Render', 'Git'],
     sourceCode: '',
-    // livePreview: 'https://firecrestai.com/',
-    images: [
-      connekt1,
-      connekt2,
-      connekt3,
-    ]
+    images: [connekt1, connekt2, connekt3]
   }
-  
   
   // {
   //   name: 'GUI Chat Application',
@@ -148,7 +147,7 @@ const projects = [
 
 const experience = [
   {
-    name: 'AfterFlea OS',
+    name: 'AfterFlea',
     description: 'January 2024 - April 2024',
     position: 'Software Engineer Intern',
     bullets: [

@@ -1,18 +1,19 @@
 .project {
   display: flex;
-  align-items: flex-start; /* Ensure top alignment */
-  justify-content: space-between; /* Keep items spaced out */
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row; /* Ensure images stay on the right on desktop */
   padding: 2em;
   margin: 0 auto;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
   background-color: var(--clr-bg-alt);
-  overflow: hidden; /* Hide any overflow */
-  outline: none; /* Remove focus outline */
+  overflow: hidden;
+  outline: none;
 }
 
 .project:focus {
-  outline: none; /* Ensure focus outline is removed */
+  outline: none;
 }
 
 .project:hover {
@@ -20,21 +21,33 @@
 }
 
 .project__description {
-  flex: 1; /* Gives text a flexible width, but not as wide as images */
-  text-align: left; /* Align text to the left */
-  margin-right: 20px; /* Space between text and image */
+  flex: 1;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.project__bullets {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0;
+  margin: 1em 0;
+}
+
+.project__bullet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .project__stack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Align stack items at the start */
+  justify-content: flex-start;
   margin: 1.2em 0;
 }
 
 .project__stack-item {
-  line-height: 1.5; /* Improved readability */
-  margin: 0.75em; /* Consistent margin */
+  line-height: 1.5;
+  margin: 0.75em;
   font-weight: 500;
   font-size: 0.8rem;
   color: var(--clr-fg-alt);
@@ -45,18 +58,19 @@
 }
 
 .project__demo {
-  flex: 1; /* Gives the image area flexible width up to half of the container */
-  width: 50%; /* Explicitly define width to half of the container */
-  text-align: center; /* Center the image or video */
+  flex: 1;
+  width: 50%;
+  text-align: center;
+  order: 2; /* Position images on the right */
 }
 
 .project__demo img {
-  margin-top: 30px;
-  width: 100%; /* Full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 600px; /* Control maximum height */
+  margin-top: 5rem;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
   border-radius: 10px;
-  border: .25px solid gray;
+  border: 0.25px solid gray;
 }
 
 .project__dots {
@@ -79,11 +93,33 @@
 }
 
 .project__demo.mobile-app img {
-  max-width: 30%; /* Keep the width adjustment for mobile app specific styling */
-  height: 300px; /* Ensure mobile app images also have the same height */
-  object-fit: cover; /* Adjusts the content of the image to fit the container */
+  max-width: 30%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .project__demo.mobile-app {
-  align-self: center; /* Center the demo in the container */
+  align-self: center;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .project__demo {
+    width: 100%;
+    order: 1;
+  }
+
+  .project__description {
+    order: 2;
+    text-align: center;
+  }
+
+  .project__bullets {
+    display: none; /* Hide bullets on mobile */
+  }
 }
