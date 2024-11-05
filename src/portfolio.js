@@ -49,9 +49,10 @@ const projects = [
     description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
     bullets: [
       'Developed a generative AI design dashboard for content generation with various LLM model selections.',
-      'Implemented PostgreSQL for data management, OAuth 2.0, and 2FA for security.',
-      'Integrated tools like LangChain, OpenAI, PaLM, and Hugging Face for model training.',
-      'Built with a stack including HTML, CSS, JavaScript, SQL, Python, React, Flask, and PostgreSQL.'
+      'Ability to change model, token, and temperature settings through user-defined parameters',
+      'Implemented PostgreSQL for data management, OAuth 2.0, and 2FA security for 50+ accounts.',
+      'Integrated tools like LangChain paired with OpenAI and PaLM, and for LLM features.',
+      'Used Flask-Mail for 2FA email verification and Render for deployment.'
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
@@ -63,11 +64,12 @@ const projects = [
     name: 'Fabflix',
     description: 'Effortlessly browse, search, and buy movies on this secure, high-performance web platform.',
     bullets: [
-      'Created a movie web application for browsing, searching, and purchasing movies.',
-      'Utilized AWS EC2, MySQL, Tomcat, Maven, and Docker for scalable and secure deployment.',
+      'Engineered a dynamic web application enabling users to browse, search, and purchase from a vast movie catalog hosting 20,000 movies and 70,000 actors',
+      'Utilized AWS EC2 and S3, MySQL, Tomcat, Maven, Kubernetes, Docker for scalable and secure deployment.',
       'Implemented HTTPS, reCAPTCHA, and password encryption for enhanced security.',
-      'Improved database performance by 25% using MySQL connection pooling.',
-      'Deployed on an AWS-based Kubernetes cluster and tested with JMeter.'
+      'Ensured support for CRUD operations under users/administrators, integrating features including session-based cart checkout, full-text search with auto-complete, and SQL injection prevention via PreparedStatements',
+      'Leveraged JMeter to identify performance bottlenecks/threading issues, ultimately improving database performance by 25% through MySQL connection pooling',
+      'Used AJAX to retrieve JSON data from the backend and dynamically update the frontend'
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX', 'MySQL', 'Tomcat', 'Docker', 'Kubernetes', 'JMeter', 'AWS', 'Git', 'Maven'],
     sourceCode: '',
