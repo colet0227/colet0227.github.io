@@ -1,50 +1,109 @@
-.nav {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: var(--clr-bg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar__content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  color: var(--icon-color);
+  padding: 1rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.nav__list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav__list-item {
-  display: inline;
-}
-
-.link--nav {
-  color: var(--icon-color);
+.navbar__logo {
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
   text-decoration: none;
-  font-size: 18px;
   transition: color 0.3s ease;
 }
 
-.link--nav:hover {
-  color: #ddd;
+.navbar__logo:hover {
+  color: var(--clr-fg);
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__list-item {
+  margin-left: 2rem;
+}
+
+.navbar__link {
+  color: var(--clr-fg);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: var(--clr-primary);
 }
 
 .btn {
   background: none;
   border: none;
   cursor: pointer;
+  color: var(--clr-fg);
+  transition: color 0.3s ease;
+}
+
+.btn:hover {
+  color: var(--clr-primary);
 }
 
 .btn--icon {
-  font-size: 24px;
-  color: var(--icon-color);
+  font-size: 1.5rem;
 }
 
-.center {
-  text-align: center;
+.navbar__hamburger {
+  display: none !important;
 }
 
-.nav__theme, .nav__hamburger {
-  margin-left: 20px;
-}
+@media screen and (max-width: 768px) {
+  .navbar__content {
+    flex-wrap: wrap;
+  }
 
-.nav__list-item:last-child {
-  margin-right: 20px;
+  .navbar__list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .navbar__list--active {
+    display: flex;
+  }
+
+  .navbar__list-item {
+    margin: 0.5rem 0;
+  }
+
+  .navbar__hamburger {
+    display: block !important;
+    margin-left: auto;
+  }
+
+  .navbar__theme-toggle {
+    margin-top: 0.5rem;
+  }
+
+  .navbar__logo {
+    display: none;
+  }
 }

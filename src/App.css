@@ -6,16 +6,15 @@
   position: fixed;
   width: 100%;
   height: 100%;
-
   background-image: radial-gradient(var(--clr-haha) 1px, transparent 1px), 
                     radial-gradient(var(--clr-haha) 1px, transparent 1px);
   background-size: 30px 30px; 
-  /* background-position: 0 0, 15px 15px; */
-
 }
 
 .content {
   height: 100%;
+  width: 90%;
+  margin-left: 5%;
   overflow: auto;
 }
 
@@ -96,47 +95,31 @@ main {
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   cursor: pointer;
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  transition: transform 0.2s ease-in-out;
-  margin-left: auto;
-  margin-right: auto;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn--outline {
-  color: var(--clr-fg);
-  border: 1px solid var(--clr-fg);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  width: 70px;
-  height: 20px;
-  align-items: center;
+  display: block;
+  color: var(--clr-primary);
+  background-color: transparent;
+  border: 2px solid var(--clr-primary);
+  border-radius: 50px;
+  padding: 0.6em 1.2em;
+  transition: all 0.3s ease;
+  width: auto;
 }
 
 .btn--outline:hover,
 .btn--outline:focus {
   color: var(--clr-bg);
-}
-
-.btn--outline:before {
-  content: '';
-  position: absolute;
   background-color: var(--clr-primary);
-  right: 100%;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  transition: right .5s ease-in-out;
-}
-
-.btn--outline:hover:before,
-.btn--outline:focus:before {
-  right: 0;
 }
 
 .btn--plain {

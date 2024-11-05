@@ -1,88 +1,102 @@
 import { useContext, useState } from 'react'
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact, experience } from '../../portfolio'
+import LightModeIcon from '@mui/icons-material/LightMode'
+import DarkModeIcon from '@mui/icons-material/DarkMode'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import './Navbar.css'
 
 const Navbar = () => {
-  const { themeName, toggleTheme } = useContext(ThemeContext);
+  const { themeName, toggleTheme } = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
   const smoothScrollTo = (id, event) => {
-    event.preventDefault();
-    const element = document.getElementById(id);
+    event.preventDefault()
+    const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' })
     }
-    toggleNavList();
-  };
+    toggleNavList()
+  }
 
   return (
-    <nav className='center nav'>
-      <ul
-        style={{ display: showNavList ? 'flex' : null }}
-        className='nav__list'
-      >
-        {projects.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#projects'
-              onClick={(e) => smoothScrollTo('projects', e)}
-              className='link link--nav'
-            >
-              Projects
-            </a>
-          </li>
-        ) : null}
+    <nav className='navbar'>
+      <div className='navbar__content'>
+        <a href="/" className='navbar__logo'>Portfolio</a>
 
-        {skills.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#skills'
-              onClick={(e) => smoothScrollTo('skills', e)}
-              className='link link--nav'
-            >
-              Skills
-            </a>
-          </li>
-        ) : null}
+        <button
+          type='button'
+          onClick={toggleNavList}
+          className='btn btn--icon navbar__hamburger'
+          aria-label='toggle navigation'
+        >
+          {showNavList ? <CloseIcon /> : <MenuIcon />}
+        </button>
 
-        {experience.length ? (
-          <li className='nav__list-item'>
-            <a
-              href='#experience'
-              onClick={(e) => smoothScrollTo('experience', e)}
-              className='link link--nav'
-            >
-              Experience
-            </a>
-          </li>
-        ) : null}
+        <ul className={`navbar__list ${showNavList ? 'navbar__list--active' : ''}`}>
+          {projects.length ? (
+            <li className='navbar__list-item'>
+              <a
+                href='#projects'
+                onClick={(e) => smoothScrollTo('projects', e)}
+                className='navbar__link'
+              >
+                Projects
+              </a>
+            </li>
+          ) : null}
 
-        {contact.email ? (
-          <li className='nav__list-item'>
-            <a
-              href='#contact'
-              onClick={(e) => smoothScrollTo('contact', e)}
-              className='link link--nav'
-            >
-              Contact
-            </a>
-          </li>
-        ) : null}
-      </ul>
+          {experience.length ? (
+            <li className='navbar__list-item'>
+              <a
+                href='#experience'
+                onClick={(e) => smoothScrollTo('experience', e)}
+                className='navbar__link'
+              >
+                Experience
+              </a>
+            </li>
+          ) : null}
 
-      <button
-        type='button'
-        onClick={toggleTheme}
-        className='btn btn--icon nav__theme'
-        aria-label='toggle theme'
-      >
-        {themeName === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-      </button>
+          {skills.length ? (
+            <li className='navbar__list-item'>
+              <a
+                href='#skills'
+                onClick={(e) => smoothScrollTo('skills', e)}
+                className='navbar__link'
+              >
+                Skills
+              </a>
+            </li>
+          ) : null}
+
+          {contact.email ? (
+            <li className='navbar__list-item'>
+              <a
+                href='#contact'
+                onClick={(e) => smoothScrollTo('contact', e)}
+                className='navbar__link'
+              >
+                Contact
+              </a>
+            </li>
+          ) : null}
+
+          <li className='navbar__list-item navbar__theme-toggle'>
+            <button
+              type='button'
+              onClick={toggleTheme}
+              className='btn btn--icon'
+              aria-label='toggle theme'
+            >
+              {themeName === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
