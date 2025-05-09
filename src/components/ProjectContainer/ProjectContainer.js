@@ -2,22 +2,38 @@ import uniqid from 'uniqid';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import './ProjectContainer.css';
+import React from 'react';
 
 const ProjectContainer = ({ project }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const projectRef = useRef(null);
+  const demoRef = useRef(null);
 
-  const handleDotClick = (index) => {
-    setCurrentImage(index);
+  const nextImage = () => {
+    setCurrentImage((prevIndex) => (prevIndex + 1) % project.images.length);
   };
+
+  const prevImage = () => {
+    setCurrentImage((prevIndex) => (prevIndex - 1 + project.images.length) % project.images.length);
+  };
+
+  // Update the background when the current image changes
+  useEffect(() => {
+    if (demoRef.current && project.images && project.images.length > 0) {
+      const demoEl = demoRef.current;
+      demoEl.style.setProperty('--current-image', `url(${project.images[currentImage]})`);
+    }
+  }, [currentImage, project.images]);
 
   const handleKeyDown = useCallback((event) => {
     if (event.key === 'ArrowRight') {
-      setCurrentImage((prevIndex) => (prevIndex + 1) % project.images.length);
+      nextImage();
     } else if (event.key === 'ArrowLeft') {
-      setCurrentImage((prevIndex) => (prevIndex - 1 + project.images.length) % project.images.length);
+      prevImage();
     }
   }, [project.images.length]);
 
@@ -33,41 +49,76 @@ const ProjectContainer = ({ project }) => {
     };
   }, [handleKeyDown]);
 
-  const isMobileApp = project.name === 'PlateMate';
-
   return (
     <div
-      className='project'
+      className={`project ${project.name === 'Connekt' ? 'project--connekt' : ''}`}
       tabIndex="0"
       ref={projectRef}
     >
-      <div className={`project__demo ${isMobileApp ? 'mobile-app' : ''}`}>
-        {project.images && project.images.length > 0 && (
-          <>
-            <img src={project.images[currentImage]} alt='Demo' />
-            <div className='project__dots'>
-              {project.images.map((_, index) => (
-                <span
-                  key={index}
-                  className={`dot ${index === currentImage ? 'active' : ''}`}
-                  onClick={() => handleDotClick(index)}
-                ></span>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
+      {project.images && project.images.length > 0 && (
+        <div className="project__demo" ref={demoRef} style={{ 
+          '--current-image': `url(${project.images[currentImage]})` 
+        }}>
+          <div className="project__demo-inner">
+            <img src={project.images[currentImage]} alt={`${project.name} demo`} />
+            <div className="image-overlay"></div>
+            {project.images.length > 1 && (
+              <div className="project__navigation">
+                <div className="nav-arrow" onClick={prevImage}>
+                  <ArrowBackIosIcon style={{ fontSize: '0.9rem' }} />
+                </div>
+                <div className="image-counter">
+                  {currentImage + 1}/{project.images.length}
+                </div>
+                <div className="nav-arrow" onClick={nextImage}>
+                  <ArrowForwardIosIcon style={{ fontSize: '0.9rem' }} />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
-      <div className='project__description'>
-        <h3>{project.name}</h3>
-        <p>{project.description}</p>
+      <div className="project__content">
+        <div className="project__header">
+          <h3 className="project__title">{project.name}</h3>
+          
+          <div className="project__links">
+            {project.sourceCode && (
+              <a
+                href={project.sourceCode}
+                aria-label="source code"
+                className="link--icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon />
+              </a>
+            )}
 
-        {/* Display bullet points with ArrowForward icon, hidden on mobile */}
+            {project.livePreview && (
+              <a
+                href={project.livePreview}
+                aria-label="live preview"
+                className="link--icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LaunchIcon />
+              </a>
+            )}
+          </div>
+        </div>
+
+        <div className="project__description">
+          <p>{project.description}</p>
+        </div>
+
         {project.bullets && (
-          <ul className='project__bullets'>
+          <ul className="project__bullets">
             {project.bullets.map((bullet) => (
-              <li key={uniqid()} className='project__bullet'>
-                <ArrowForwardIcon fontSize='small' />
+              <li key={uniqid()} className="project__bullet">
+                <ArrowForwardIcon fontSize="small" />
                 <span>{bullet}</span>
               </li>
             ))}
@@ -75,33 +126,11 @@ const ProjectContainer = ({ project }) => {
         )}
 
         {project.stack && (
-          <ul className='project__stack'>
+          <div className="project__stack">
             {project.stack.map((item) => (
-              <li key={uniqid()} className='project__stack-item'>
-                {item}
-              </li>
+              <span key={uniqid()} className="project__stack-item">{item}</span>
             ))}
-          </ul>
-        )}
-
-        {project.sourceCode && (
-          <a
-            href={project.sourceCode}
-            aria-label='source code'
-            className='link link--icon'
-          >
-            <GitHubIcon />
-          </a>
-        )}
-
-        {project.livePreview && (
-          <a
-            href={project.livePreview}
-            aria-label='live preview'
-            className='link link--icon'
-          >
-            <LaunchIcon />
-          </a>
+          </div>
         )}
       </div>
     </div>

@@ -1,15 +1,16 @@
 .project {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row; /* Ensure images stay on the right on desktop */
-  padding: 2em;
+  flex-direction: column;
+  padding: 0;
   margin: 0 auto;
   box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  transition: all 0.3s ease;
   background-color: var(--clr-bg-alt);
+  border-radius: 16px;
   overflow: hidden;
-  outline: none;
+  position: relative;
+  min-height: 750px;
+  height: 100%;
 }
 
 .project:focus {
@@ -17,109 +18,274 @@
 }
 
 .project:hover {
-  transform: translateY(-7px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project__demo {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  background-color: rgba(var(--clr-primary-rgb), 0.01);
+  --current-image: none;
+}
+
+/* Background blur effect derived from image */
+.project__demo::before {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  background-image: var(--current-image);
+  background-position: center;
+  background-size: cover;
+  filter: blur(25px) saturate(120%);
+  opacity: 0.65;
+  z-index: 0;
+  transform: scale(1.05);
+}
+
+/* Consistent branded overlay on top of the blur effect */
+.project__demo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(var(--clr-primary-rgb), 0.15) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.project__demo-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__demo img {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.project:hover .project__demo img {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.project__navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--clr-primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.image-counter {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: rgba(var(--clr-primary-rgb), 0.5);
+}
+
+.project__content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.project__title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--clr-fg-alt);
+  position: relative;
+  display: inline-block;
+}
+
+.project__title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--clr-primary);
+  border-radius: 3px;
+}
+
+.project__links {
+  display: flex;
+  gap: 15px;
 }
 
 .project__description {
-  flex: 1;
-  text-align: left;
-  margin-right: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.project__description p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--clr-fg);
 }
 
 .project__bullets {
-  list-style-type: none; /* Remove default bullet points */
+  list-style-type: none;
   padding-left: 0;
-  margin: 1em 0;
+  margin: 1.5rem 0;
 }
 
 .project__bullet {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.project__bullet svg {
+  color: var(--clr-primary);
+  min-width: 20px;
+  margin-top: 3px;
+}
+
+.project__bullet span {
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .project__stack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: 1.2em 0;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
 }
 
 .project__stack-item {
-  line-height: 1.5;
-  margin: 0.75em;
+  padding: 0.4em 0.7em;
   font-weight: 500;
-  font-size: 0.8rem;
-  color: var(--clr-fg-alt);
+  font-size: 0.75rem;
+  color: var(--clr-primary);
+  background-color: rgba(var(--clr-primary-rgb), 0.08);
+  border-radius: 30px;
+  transition: all 0.2s ease;
 }
 
-.project .link--icon {
-  margin-left: 0.5em;
+.project__stack-item:hover {
+  background-color: rgba(var(--clr-primary-rgb), 0.15);
+  transform: translateY(-2px);
 }
 
-.project__demo {
-  flex: 1;
-  width: 50%;
-  text-align: center;
-  order: 2; /* Position images on the right */
+.tech-separator {
+  margin: 0 8px;
+  color: var(--clr-fg);
+  opacity: 0.3;
 }
 
-.project__demo img {
-  margin-top: 5rem;
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  border-radius: 10px;
-  border: 0.25px solid gray;
+.link--icon {
+  color: var(--clr-primary);
+  transition: all 0.3s ease;
 }
 
-.project__dots {
-  text-align: center;
-  padding: 10px 0;
+.link--icon:hover {
+  color: var(--clr-primary);
+  transform: translateY(-2px);
 }
 
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
+/* Fix for the Connekt project */
+.project--connekt {
+  min-height: 750px;
 }
 
-.dot.active {
-  background-color: #717171;
-}
-
-.project__demo.mobile-app img {
-  max-width: 30%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.project__demo.mobile-app {
-  align-self: center;
-}
-
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-  .project {
-    flex-direction: column;
-    padding: 1em;
+@media screen and (max-width: 600px) {
+  .project__content {
+    padding: 1.5rem;
   }
-
+  
   .project__demo {
-    width: 100%;
-    order: 1;
+    height: 220px;
   }
-
-  .project__description {
-    order: 2;
-    text-align: center;
+  
+  .project__title {
+    font-size: 1.5rem;
   }
-
+  
   .project__bullets {
-    display: none; /* Hide bullets on mobile */
+    margin: 1.2rem 0;
+  }
+  
+  .project__bullet {
+    margin-bottom: 0.6rem;
+  }
+  
+  .nav-arrow {
+    width: 30px;
+    height: 30px;
   }
 }

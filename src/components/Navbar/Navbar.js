@@ -1,14 +1,12 @@
 import { useContext, useState } from 'react'
 import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact, experience } from '../../portfolio'
-import LightModeIcon from '@mui/icons-material/LightMode'
-import DarkModeIcon from '@mui/icons-material/DarkMode'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import './Navbar.css'
 
 const Navbar = () => {
-  const { themeName, toggleTheme } = useContext(ThemeContext)
+  const { themeName } = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList(!showNavList)
@@ -84,17 +82,6 @@ const Navbar = () => {
               </a>
             </li>
           ) : null}
-
-          <li className='navbar__list-item navbar__theme-toggle'>
-            <button
-              type='button'
-              onClick={toggleTheme}
-              className='btn btn--icon'
-              aria-label='toggle theme'
-            >
-              {themeName === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
-            </button>
-          </li>
         </ul>
       </div>
     </nav>

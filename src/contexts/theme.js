@@ -1,41 +1,23 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
-  const [themeName, setThemeName] = useState(() => localStorage.getItem('themeName') || 'light')
-
+  // Force light theme
   useEffect(() => {
-    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-    const initialTheme = darkMediaQuery.matches ? 'dark' : 'light';
-    setThemeName(initialTheme);
-  
-    // Add initial theme class to body
-    document.body.classList.add(initialTheme);
-  
-    darkMediaQuery.addEventListener('change', (e) => {
-      const newTheme = e.matches ? 'dark' : 'light';
-      setThemeName(newTheme);
-  
-      // Remove old theme class from body and add new theme class
-      document.body.classList.remove('light', 'dark');
-      document.body.classList.add(newTheme);
-    });
+    // Remove any existing theme classes and add light
+    document.body.classList.remove('dark');
+    document.body.classList.add('light');
   }, []);
   
+  // No-op toggle function to avoid breaking any existing code
   const toggleTheme = () => {
-    const newTheme = themeName === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('themeName', newTheme);
-    setThemeName(newTheme);
-  
-    // Remove old theme class from body and add new theme class
-    document.body.classList.remove('light', 'dark');
-    document.body.classList.add(newTheme);
+    // Do nothing - only light theme is supported now
   };
   
   return (
-    <ThemeContext.Provider value={{ themeName, toggleTheme }}>
+    <ThemeContext.Provider value={{ themeName: 'light', toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   )
