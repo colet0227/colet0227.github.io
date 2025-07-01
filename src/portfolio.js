@@ -22,6 +22,8 @@ import fabflix7 from "./contexts/fabflix7.png"
 import connekt1 from "./contexts/connekt1.png"
 import connekt2 from "./contexts/connekt2.png"
 import connekt3 from "./contexts/connekt3.png"
+import lapenamock from "./contexts/lapenamock.png"
+import firecrestmock from "./contexts/firecrestmock.png"
 
 const header = {
   // all the properties are optional - can be left empty or deleted
@@ -45,6 +47,21 @@ const about = {
 
 const projects = [
   {
+    name: 'La Peña',
+    description: 'Transform nonprofit operations with this comprehensive web platform designed to streamline invoicing, event scheduling, and administrative workflows for La Peña.',
+    bullets: [
+      'Engineered a React-based web app for La Peña Cultural Center - a nonprofit hosting cultural events and workshops - to streamline invoice processing and event planning, reducing administrative hours by 60% and managing 50+ monthly bookings.',
+      'Built robust RESTful API endpoints using Node.js, Express, and PostgreSQL to manage invoicing, room bookings, and client data, streamlining data integration for smoother operations.',
+      'Translated high-fidelity Figma designs into pixel-perfect, responsive interfaces for authentication, invoicing, and event scheduling, boosting user satisfaction.',
+      'Optimized invoice calculation logic to accurately apply booking-specific adjustments, saving 10 hours per month of manual inventory management.'
+    ],
+    stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JavaScript', 'HTML', 'CSS', 'Chakra UI', 'Figma', 'Git'],
+    sourceCode: 'https://github.com/ctc-uci/lpa',
+    livePreview: '',
+    images: [lapenamock]
+  },
+
+  {
     name: 'Firecrest',
     description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
     bullets: [
@@ -57,7 +74,7 @@ const projects = [
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
     livePreview: 'https://firecrestai.com/',
-    images: [firecrest1, firecrest2, firecrest3, firecrest4]
+    images: [firecrestmock]
   },
 
   {

@@ -21,13 +21,7 @@ const ProjectContainer = ({ project }) => {
     setCurrentImage((prevIndex) => (prevIndex - 1 + project.images.length) % project.images.length);
   };
 
-  // Update the background when the current image changes
-  useEffect(() => {
-    if (demoRef.current && project.images && project.images.length > 0) {
-      const demoEl = demoRef.current;
-      demoEl.style.setProperty('--current-image', `url(${project.images[currentImage]})`);
-    }
-  }, [currentImage, project.images]);
+
 
   const handleKeyDown = useCallback((event) => {
     if (event.key === 'ArrowRight') {
@@ -56,12 +50,9 @@ const ProjectContainer = ({ project }) => {
       ref={projectRef}
     >
       {project.images && project.images.length > 0 && (
-        <div className="project__demo" ref={demoRef} style={{ 
-          '--current-image': `url(${project.images[currentImage]})` 
-        }}>
+        <div className="project__demo" ref={demoRef}>
           <div className="project__demo-inner">
             <img src={project.images[currentImage]} alt={`${project.name} demo`} />
-            <div className="image-overlay"></div>
             {project.images.length > 1 && (
               <div className="project__navigation">
                 <div className="nav-arrow" onClick={prevImage}>
