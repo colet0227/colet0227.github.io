@@ -15,9 +15,14 @@ const Navbar = () => {
     event.preventDefault()
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const navbarHeight = 120 // Account for navbar height and spacing
+      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      })
     }
-    toggleNavList()
+    setShowNavList(false) // Close mobile menu
   }
 
   return (

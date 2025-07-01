@@ -37,7 +37,7 @@ const about = {
   name: 'Cole',
   role: 'Associate Software Engineer @ Capital One',
   description:
-    'Passionate software engineer specializing in full-stack development and scalable solutions. Experienced in building impactful applications that streamline operations and enhance user experiences across diverse industries.',
+    'Passionate software engineer specializing in full-stack development and scalable solutions. Experienced in building impactful applications that streamline operations and enhance user experiences across diverse industries',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
