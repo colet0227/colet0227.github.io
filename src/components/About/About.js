@@ -59,10 +59,9 @@ const About = () => {
         )}
 
         {resume && (
-          <a href={resume}>
-            <span type='button' className='btn btn--outline'>
-              Resume
-            </span>
+          <a href={resume} className="resume-button" target="_blank" rel="noopener noreferrer">
+            <span className="resume-text">View Resume</span>
+            <span className="resume-icon">📄</span>
           </a>
         )}
       </div>

@@ -18,7 +18,16 @@ const Projects = () => {
       </div>
       <div className='project_description'>
         {/* i only want the following p to be center text aligned */}
-        <p>Look for more projects on my Github!</p>
+        <p>
+          <a 
+            href="https://github.com/colet0227" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            Look for more projects on my Github!
+          </a>
+        </p>
       </div>
     </section>
   )

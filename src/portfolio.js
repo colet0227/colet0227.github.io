@@ -1,27 +1,27 @@
 import aboutpic from "./contexts/updated.jpeg"
 import res from "./contexts/Resume.pdf"
-import firecrest1 from "./contexts/firecrest1.png"
-import firecrest2 from "./contexts/firecrest2.png"
-import firecrest3 from "./contexts/firecrest3.png"
-import firecrest4 from "./contexts/firecrest4.png"
-import search1 from "./contexts/search1.png"
-import search2 from "./contexts/search2.png"
+// import firecrest1 from "./contexts/firecrest1.png"
+// import firecrest2 from "./contexts/firecrest2.png"
+// import firecrest3 from "./contexts/firecrest3.png"
+// import firecrest4 from "./contexts/firecrest4.png"
+// import search1 from "./contexts/search1.png"
+// import search2 from "./contexts/search2.png"
 // import chat1 from "./contexts/chat1.png"
 // import chat2 from "./contexts/chat2.png"
 // import chat3 from "./contexts/chat3.png"
 // import plate1 from "./contexts/plate1.png"
 // import plate2 from "./contexts/plate2.png"
 // import ball1 from "./contexts/ball1.png"
-import fabflix1 from "./contexts/fabflix1.png"
+// import fabflix1 from "./contexts/fabflix1.png"
 import fabflix2 from "./contexts/fabflix2.png"
-import fabflix3 from "./contexts/fabflix3.png"
-import fabflix4 from "./contexts/fabflix4.png"
-import fabflix5 from "./contexts/fabflix5.png"
-import fabflix6 from "./contexts/fabflix6.png"
-import fabflix7 from "./contexts/fabflix7.png"
+// import fabflix3 from "./contexts/fabflix3.png"
+// import fabflix4 from "./contexts/fabflix4.png"
+// import fabflix5 from "./contexts/fabflix5.png"
+// import fabflix6 from "./contexts/fabflix6.png"
+// import fabflix7 from "./contexts/fabflix7.png"
 import connekt1 from "./contexts/connekt1.png"
-import connekt2 from "./contexts/connekt2.png"
-import connekt3 from "./contexts/connekt3.png"
+// import connekt2 from "./contexts/connekt2.png"
+// import connekt3 from "./contexts/connekt3.png"
 import lapenamock from "./contexts/lapenamock.png"
 import firecrestmock from "./contexts/firecrestmock.png"
 
@@ -35,9 +35,9 @@ const about = {
   photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
   name: 'Cole',
-  role: 'Computer Science @ UC Irvine',
+  role: 'Associate Software Engineer @ Capital One',
   description:
-    'A budding software engineer keen on using coding skills to make people\'s lives better. Eager to create simple tech solutions that address real-life issues and enrich the quality of daily life',
+    'Passionate software engineer specializing in full-stack development and scalable solutions. Experienced in building impactful applications that streamline operations and enhance user experiences across diverse industries.',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
@@ -91,38 +91,34 @@ const projects = [
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX', 'MySQL', 'Tomcat', 'Docker', 'Kubernetes', 'JMeter', 'AWS', 'Git', 'Maven'],
     sourceCode: '',
     livePreview: 'https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH',
-    images: [fabflix1, fabflix2, fabflix3, fabflix4, fabflix5, fabflix6, fabflix7]
+    images: [fabflix2] // [fabflix1, fabflix2, fabflix3, fabflix4, fabflix5, fabflix6, fabflix7]
   },
 
   {
-    name: 'Search Engine and Web Crawler',
+    name: 'Search Engine/Web Crawler',
     description: 'Quickly access precise information across UC Irvine’s computer science subdomain with this tailored, high-performance search engine.',
     bullets: [
       'Designed a custom web search engine with the ability to handle 50,000+ documents and reduced average query response time to under 100ms by indexing token positions',
-      'Incorporated partial indexing to save > 80% memory usage and made use of the Snowball Stemmer for better textual matches',
       'Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags',
-      'Created targeted sim-hashing function with blake2b to detect and eliminate near duplicate pages',
-      'Integrate extensive web crawling trap detection including high information content, URL depth, correct files types, and more',
-      'Used Flask to prop up a user-friendly web interface'
     ],
     stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
-    images: [search1, search2]
+    images: [] // [search1, search2]
   },
 
   {
     name: 'Connekt',
     description: 'Connect, track, and achieve together—a fitness community app for group support and shared progress.',
     bullets: [
-      'Currently developing a fitness community app with React frontend and Flask/Python backend.',
+      'Developed a fitness community app with React frontend and Flask/Python backend.',
       'Enables users to create/join groups, track progress, and share achievements.',
       'Deployed on Render with PostgreSQL for data management.',
       'Designed to foster a supportive gym and fitness community experience.'
     ],
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'Render', 'Git'],
     sourceCode: '',
-    images: [connekt1, connekt2, connekt3]
+    images: [connekt1] // [connekt1, connekt2, connekt3]
   }
   
   // {

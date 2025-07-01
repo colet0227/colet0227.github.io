@@ -4,7 +4,7 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useRef } from 'react';
 import './ProjectContainer.css';
 import React from 'react';
 
@@ -23,25 +23,7 @@ const ProjectContainer = ({ project }) => {
 
 
 
-  const handleKeyDown = useCallback((event) => {
-    if (event.key === 'ArrowRight') {
-      nextImage();
-    } else if (event.key === 'ArrowLeft') {
-      prevImage();
-    }
-  }, [project.images.length]);
 
-  useEffect(() => {
-    const projectElement = projectRef.current;
-    if (projectElement) {
-      projectElement.addEventListener('keydown', handleKeyDown);
-    }
-    return () => {
-      if (projectElement) {
-        projectElement.removeEventListener('keydown', handleKeyDown);
-      }
-    };
-  }, [handleKeyDown]);
 
   return (
     <div
@@ -49,7 +31,7 @@ const ProjectContainer = ({ project }) => {
       tabIndex="0"
       ref={projectRef}
     >
-      {project.images && project.images.length > 0 && (
+      {project.images && project.images.length > 0 && project.name !== 'Connekt' && project.name !== 'Fabflix' && (
         <div className="project__demo" ref={demoRef}>
           <div className="project__demo-inner">
             <img src={project.images[currentImage]} alt={`${project.name} demo`} />
@@ -114,6 +96,20 @@ const ProjectContainer = ({ project }) => {
               </li>
             ))}
           </ul>
+        )}
+
+        {/* Connekt image below bullets */}
+        {project.name === 'Connekt' && project.images && project.images.length > 0 && (
+          <div className="connekt-image">
+            <img src={project.images[currentImage]} alt={`${project.name} demo`} />
+          </div>
+        )}
+
+        {/* Fabflix image below bullets */}
+        {project.name === 'Fabflix' && project.images && project.images.length > 0 && (
+          <div className="fabflix-image">
+            <img src={project.images[currentImage]} alt={`${project.name} demo`} />
+          </div>
         )}
 
         {project.stack && (

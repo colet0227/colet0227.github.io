@@ -210,6 +210,40 @@
   min-height: 750px;
 }
 
+.connekt-image {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.connekt-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.fabflix-image {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.fabflix-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 600px) {
   .project__content {
     padding: 1.5rem;
