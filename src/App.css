@@ -53,6 +53,7 @@ main {
 
 .section {
   margin-top: 5em;
+  scroll-margin-top: 80px;
 }
 
 .section__title {

@@ -95,7 +95,7 @@ const projects = [
   },
 
   {
-    name: 'Search Engine/Web Crawler',
+    name: 'Search Engine and Web Crawler',
     description: 'Quickly access precise information across UC Irvine’s computer science subdomain with this tailored, high-performance search engine.',
     bullets: [
       'Designed a custom web search engine with the ability to handle 50,000+ documents and reduced average query response time to under 100ms by indexing token positions',

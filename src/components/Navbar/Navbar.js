@@ -1,12 +1,10 @@
-import { useContext, useState } from 'react'
-import { ThemeContext } from '../../contexts/theme'
+import { useState } from 'react'
 import { projects, skills, contact, experience } from '../../portfolio'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import './Navbar.css'
 
 const Navbar = () => {
-  const { themeName } = useContext(ThemeContext)
   const [showNavList, setShowNavList] = useState(false)
 
   const toggleNavList = () => setShowNavList(!showNavList)
@@ -15,20 +13,20 @@ const Navbar = () => {
     event.preventDefault()
     const element = document.getElementById(id)
     if (element) {
-      const navbarHeight = 120 // Account for navbar height and spacing
-      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
       })
     }
-    setShowNavList(false) // Close mobile menu
+    setShowNavList(false)
   }
 
   return (
     <nav className='navbar'>
       <div className='navbar__content'>
-        <a href="/" className='navbar__logo'>Portfolio</a>
+        <a href="/" className='navbar__logo'>
+          <span className='navbar__logo-text'>✦</span>
+        </a>
 
         <button
           type='button'

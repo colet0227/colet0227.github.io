@@ -1,5 +1,6 @@
 .section.projects {
   padding: 3rem 0;
+  scroll-margin-top: 30px;
 }
 
 .section__title {
