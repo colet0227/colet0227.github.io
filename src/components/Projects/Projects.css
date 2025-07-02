@@ -62,17 +62,17 @@
 
 /* Fabflix - 40% width */
 .projects__third-row > *:nth-child(1) {
-  flex: 0 0 40%;
+  flex: 0 0 39.5%;
 }
 
 /* Search Engine - 29% width */
 .projects__third-row > *:nth-child(2) {
-  flex: 0 0 29%;
+  flex: 0 0 25%;
 }
 
 /* Connekt - 31% width */
 .projects__third-row > *:nth-child(3) {
-  flex: 0 0 31%;
+  flex: 0 0 29%;
 }
 
 .project_description {

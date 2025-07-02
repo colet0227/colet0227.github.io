@@ -37,7 +37,7 @@ const about = {
   name: 'Cole',
   role: 'Associate Software Engineer @ Capital One',
   description:
-    'Passionate software engineer specializing in full-stack development and scalable solutions. Experienced in building impactful applications that streamline operations and enhance user experiences across diverse industries',
+    'yo momma',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
@@ -60,7 +60,7 @@ const projects = [
     name: 'Firecrest',
     description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
     projectDescription: 'Built with React and Flask, Firecrest offers a dashboard where users can harness multiple LLM models including OpenAI\'s GPT-3.5 and PaLM. The platform features customizable model parameters, allowing users to fine-tune token limits and temperature settings for optimal results - security is also paramount with OAuth 2.0 authentication, two-factor verification via Flask-Mail, and robust PostgreSQL data management supporting over 50 active accounts. Integrated with LangChain for enhanced AI workflows, the platform is deployed on Render for reliable, scalable performance.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
+    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
     livePreview: 'https://firecrestai.com/',
     images: [firecrestmock]
@@ -70,7 +70,7 @@ const projects = [
     name: 'Fabflix',
     description: 'Effortlessly browse, search, and buy movies on this secure, high-performance web platform.',
     projectDescription: 'Built to handle massive scale with 20,000+ movies and 70,000+ actors, Fabflix delivers lightning-fast search experiences through optimized MySQL databases and smart caching strategies. The platform showcases advanced full-stack development with AJAX-powered interfaces, session-based shopping cart functionality, and sophisticated auto-complete search features. Security includes HTTPS encryption, reCAPTCHA integration, and SQL injection prevention. Deployed on AWS infrastructure using Docker and Kubernetes for scalability, with performance optimizations achieved through JMeter testing that improved database response times by 25%.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX', 'MySQL', 'Tomcat', 'Docker', 'Kubernetes', 'JMeter', 'AWS', 'Git', 'Maven'],
+    stack: ['JavaScript', 'jQuery', 'AJAX', 'Tomcat', 'MySQL', 'HTML', 'CSS', 'Docker', 'Kubernetes', 'JMeter', 'Maven', 'AWS', 'Git'],
     sourceCode: '',
     livePreview: 'https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH',
     images: [fabflix2] // [fabflix1, fabflix2, fabflix3, fabflix4, fabflix5, fabflix6, fabflix7]
@@ -78,9 +78,9 @@ const projects = [
 
   {
     name: 'Search Engine and Web Crawler',
-    description: 'Quickly access precise information across UC Irvine’s computer science subdomain with this tailored, high-performance search engine.',
+    description: 'Quickly access precise information across UC Irvine\'s computer science subdomain with this tailored, high-performance search engine.',
     projectDescription: 'The system processes over 50,000 documents while maintaining sub-100ms query response times. Built with Python and Flask, the platform implements ranking using tf-idf scoring and cosine similarity, enhanced with HTML tag weighting for improved relevance. The crawler features intelligent duplicate detection through sim-hashing with blake2b, comprehensive trap detection, and partial indexing that reduces resource usage by over 80%.',
-    stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
+    stack: ['Python', 'Flask', 'Beautiful Soup', 'NLTK', 'Hashlib', 'HTML', 'CSS', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
     images: [] // [search1, search2]
@@ -90,10 +90,10 @@ const projects = [
     name: 'Connekt',
     description: 'Connect, track, and achieve together—a fitness community app for group support and shared progress.',
     projectDescription: 'Built with React and Flask, Connekt creates an engaging ecosystem where fitness enthusiasts can form groups, track personal progress, and celebrate collective milestones. Deployed on Render with robust PostgreSQL data management, the application prioritizes user experience through responsive design and real-time updates, creating a supportive digital fitness community that bridges the gap between personal goals and social encouragement.',
-    stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'Render', 'Git'],
+    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'Render', 'Git'],
     sourceCode: '',
     images: [connekt1] // [connekt1, connekt2, connekt3]
-  }
+  },
   
   // {
   //   name: 'GUI Chat Application',
@@ -136,28 +136,37 @@ const projects = [
 
 const experience = [
   {
-    name: 'AfterFlea',
-    description: 'January 2024 - April 2024',
-    position: 'Software Engineer Intern',
-    bullets: [
-      'Leveraged React and JavaScript to redesign the landing page, boosting user engagement by 30% as reflected in new waitlist sign-ups.',
-      'Developed RESTful API routes using Express and integrated MongoDB to enhance messaging functionality, supporting seamless communication for 100+ user personas.',
-      'Created detailed mockups via Figma for the platform’s user feed feature and gathered feedback from early testers, incorporating suggestions to create a more user-centric design.',
-      // 'Utilized Docker to improve development workflows, achieving a 20% increase in deployment efficiency.',
-      // 'Created detailed mockups for the user feed feature in Figma, facilitating early user testing and guiding development towards a user-centric design.'
-    ],
+    name: 'Capital One',
+    description: 'May 2025 - Present',
+    position: 'Associate Software Engineer',
+    story: 'In progress... ',
     stack: [],
     sourceCode: '',
     livePreview: '',
   },
   {
-    name: 'University of California, Irvine',
+    name: 'Commit the Change',
+    description: 'October 2024 - Present',
+    position: 'Software Engineer',
+    story: 'I engineered a React web app for La Peña Cultural Center that reduced administrative hours by 60% and manages 50+ monthly events.',
+    stack: [],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'AfterFlea',
+    description: 'January 2024 - April 2024',
+    position: 'Software Engineer Intern',
+    story: 'I redesigned the landing page for this AI startup and enhanced messaging functionality, boosting user engagement by 30% and supporting 100+ user personas.',
+    stack: [],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'UC Irvine',
     description: 'January 2023 - June 2023',
-    position: 'ICS Lab Assistant',
-    bullets: [
-      'Tutored and supported 50+ students in building programs for various problems and computing environments using Python.',
-      'Guided students in leveraging library modules for applications including graphics, databases, web APIs, networks, and sockets.'
-    ],
+    position: 'Undergraduate Lab Tutor',
+    story: 'I supported and tutored 50+ students in Python - leveraging graphics, databases, web APIs, and networks.',
     stack: [],
     sourceCode: '',
     livePreview: '',
