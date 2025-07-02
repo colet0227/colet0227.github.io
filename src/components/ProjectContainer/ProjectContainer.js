@@ -1,7 +1,6 @@
 import uniqid from 'uniqid';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useState, useRef } from 'react';
@@ -87,15 +86,10 @@ const ProjectContainer = ({ project }) => {
           <p>{project.description}</p>
         </div>
 
-        {project.bullets && (
-          <ul className="project__bullets">
-            {project.bullets.map((bullet) => (
-              <li key={uniqid()} className="project__bullet">
-                <ArrowForwardIcon fontSize="small" />
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
+        {project.projectDescription && (
+          <div className="project__description-detail">
+            <p>{project.projectDescription}</p>
+          </div>
         )}
 
         {/* Connekt image below bullets */}

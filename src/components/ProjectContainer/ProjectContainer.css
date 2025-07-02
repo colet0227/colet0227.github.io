@@ -141,29 +141,15 @@
   color: var(--clr-fg);
 }
 
-.project__bullets {
-  list-style-type: none;
-  padding-left: 0;
+.project__description-detail {
   margin: 1.5rem 0;
 }
 
-.project__bullet {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-  margin-bottom: 0.8rem;
-  position: relative;
-}
-
-.project__bullet svg {
-  color: var(--clr-primary);
-  min-width: 20px;
-  margin-top: 3px;
-}
-
-.project__bullet span {
+.project__description-detail p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.7;
+  color: var(--clr-fg);
+  margin: 0;
 }
 
 .project__stack {

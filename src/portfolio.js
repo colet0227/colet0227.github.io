@@ -48,13 +48,8 @@ const about = {
 const projects = [
   {
     name: 'La Peña',
-    description: 'Transform nonprofit operations with this comprehensive web platform designed to streamline invoicing, event scheduling, and administrative workflows for La Peña.',
-    bullets: [
-      'Engineered a React-based web app for La Peña Cultural Center - a nonprofit hosting cultural events and workshops - to streamline invoice processing and event planning, reducing administrative hours by 60% and managing 50+ monthly bookings.',
-      'Built robust RESTful API endpoints using Node.js, Express, and PostgreSQL to manage invoicing, room bookings, and client data, streamlining data integration for smoother operations.',
-      'Translated high-fidelity Figma designs into pixel-perfect, responsive interfaces for authentication, invoicing, and event scheduling, boosting user satisfaction.',
-      'Optimized invoice calculation logic to accurately apply booking-specific adjustments, saving 10 hours per month of manual inventory management.'
-    ],
+    description: 'Transform La Peña\'s operations with this comprehensive web platform designed to streamline invoicing, event scheduling, and administrative workflows.',
+    projectDescription: 'The platform integrates React frontend components with a robust Node.js and Express backend, creating an intuitive experience for managing over 50 monthly cultural events and workshops. I translated detailed Figma designs into pixel-perfect responsive interfaces and delivered exceptional user experience while reducing administrative workload by 60%. The system features sophisticated invoice calculation logic, automated booking management, and streamlined client data handling through PostgreSQL, saving hours of manual work and enabling staff to focus on their cultural mission.',
     stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JavaScript', 'HTML', 'CSS', 'Chakra UI', 'Figma', 'Git'],
     sourceCode: 'https://github.com/ctc-uci/lpa',
     livePreview: '',
@@ -64,13 +59,7 @@ const projects = [
   {
     name: 'Firecrest',
     description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
-    bullets: [
-      'Developed a generative AI design dashboard for content generation with various LLM model selections.',
-      'Ability to change model, token, and temperature settings through user-defined parameters',
-      'Implemented PostgreSQL for data management, OAuth 2.0, and 2FA security for 50+ accounts.',
-      'Integrated tools like LangChain paired with OpenAI and PaLM, and for LLM features.',
-      'Used Flask-Mail for 2FA email verification and Render for deployment.'
-    ],
+    projectDescription: 'Built with React and Flask, Firecrest offers a dashboard where users can harness multiple LLM models including OpenAI\'s GPT-3.5 and PaLM. The platform features customizable model parameters, allowing users to fine-tune token limits and temperature settings for optimal results - security is also paramount with OAuth 2.0 authentication, two-factor verification via Flask-Mail, and robust PostgreSQL data management supporting over 50 active accounts. Integrated with LangChain for enhanced AI workflows, the platform is deployed on Render for reliable, scalable performance.',
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'LangChain', 'Render', 'Git'],
     sourceCode: '',
     livePreview: 'https://firecrestai.com/',
@@ -80,14 +69,7 @@ const projects = [
   {
     name: 'Fabflix',
     description: 'Effortlessly browse, search, and buy movies on this secure, high-performance web platform.',
-    bullets: [
-      'Engineered a dynamic web application enabling users to browse, search, and purchase from a vast movie catalog hosting 20,000 movies and 70,000 actors',
-      'Utilized AWS EC2 and S3, MySQL, Tomcat, Maven, Kubernetes, Docker for scalable and secure deployment.',
-      'Implemented HTTPS, reCAPTCHA, and password encryption for enhanced security.',
-      'Ensured support for CRUD operations under users/administrators, integrating features including session-based cart checkout, full-text search with auto-complete, and SQL injection prevention via PreparedStatements',
-      'Leveraged JMeter to identify performance bottlenecks/threading issues, ultimately improving database performance by 25% through MySQL connection pooling',
-      'Used AJAX to retrieve JSON data from the backend and dynamically update the frontend'
-    ],
+    projectDescription: 'Built to handle massive scale with 20,000+ movies and 70,000+ actors, Fabflix delivers lightning-fast search experiences through optimized MySQL databases and smart caching strategies. The platform showcases advanced full-stack development with AJAX-powered interfaces, session-based shopping cart functionality, and sophisticated auto-complete search features. Security includes HTTPS encryption, reCAPTCHA integration, and SQL injection prevention. Deployed on AWS infrastructure using Docker and Kubernetes for scalability, with performance optimizations achieved through JMeter testing that improved database response times by 25%.',
     stack: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'AJAX', 'MySQL', 'Tomcat', 'Docker', 'Kubernetes', 'JMeter', 'AWS', 'Git', 'Maven'],
     sourceCode: '',
     livePreview: 'https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH',
@@ -97,10 +79,7 @@ const projects = [
   {
     name: 'Search Engine and Web Crawler',
     description: 'Quickly access precise information across UC Irvine’s computer science subdomain with this tailored, high-performance search engine.',
-    bullets: [
-      'Designed a custom web search engine with the ability to handle 50,000+ documents and reduced average query response time to under 100ms by indexing token positions',
-      'Improved ranking accuracy for a subset of the UCI web domain through tf-idf scoring and cosine similarity in addition to assigning weights for HTML tags',
-    ],
+    projectDescription: 'The system processes over 50,000 documents while maintaining sub-100ms query response times. Built with Python and Flask, the platform implements ranking using tf-idf scoring and cosine similarity, enhanced with HTML tag weighting for improved relevance. The crawler features intelligent duplicate detection through sim-hashing with blake2b, comprehensive trap detection, and partial indexing that reduces resource usage by over 80%.',
     stack: ['Beautiful Soup', 'Python', 'Flask', 'HTML', 'CSS', 'NLTK', 'Hashlib', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
@@ -110,12 +89,7 @@ const projects = [
   {
     name: 'Connekt',
     description: 'Connect, track, and achieve together—a fitness community app for group support and shared progress.',
-    bullets: [
-      'Developed a fitness community app with React frontend and Flask/Python backend.',
-      'Enables users to create/join groups, track progress, and share achievements.',
-      'Deployed on Render with PostgreSQL for data management.',
-      'Designed to foster a supportive gym and fitness community experience.'
-    ],
+    projectDescription: 'Built with React and Flask, Connekt creates an engaging ecosystem where fitness enthusiasts can form groups, track personal progress, and celebrate collective milestones. Deployed on Render with robust PostgreSQL data management, the application prioritizes user experience through responsive design and real-time updates, creating a supportive digital fitness community that bridges the gap between personal goals and social encouragement.',
     stack: ['HTML', 'CSS', 'JavaScript', 'SQL', 'Python', 'React', 'Flask', 'PostgreSQL', 'Render', 'Git'],
     sourceCode: '',
     images: [connekt1] // [connekt1, connekt2, connekt3]
