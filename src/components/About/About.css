@@ -83,7 +83,25 @@
 }
 
 .about .link--icon {
-  margin-right: 0.8em;
+  margin-right: 1rem;
+  color: var(--clr-fg-alt);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.about .link--icon::before {
+  display: none !important;
+}
+
+.about .link--icon:hover {
+  color: var(--clr-primary);
+  transform: translateY(-2px);
+  filter: drop-shadow(0 4px 8px rgba(var(--clr-primary-rgb), 0.3));
 }
 
 .about .btn--outline {
@@ -147,10 +165,10 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .app .about {
     align-items: flex-start;
-    margin-top: 2em;
+    margin-top: -5em;
   }
 }
 

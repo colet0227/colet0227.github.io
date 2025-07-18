@@ -1,13 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { projects, skills, contact, experience } from '../../portfolio'
 import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
 import './Navbar.css'
 
 const Navbar = () => {
   const [showNavList, setShowNavList] = useState(false)
+  const navRef = useRef(null)
 
   const toggleNavList = () => setShowNavList(!showNavList)
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setShowNavList(false)
+      }
+    }
+
+    if (showNavList) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showNavList])
 
   const smoothScrollTo = (id, event) => {
     event.preventDefault()
@@ -22,7 +39,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar'>
+    <nav className='navbar' ref={navRef}>
       <div className='navbar__content'>
         <a href="/" className='navbar__logo'>
           <span className='navbar__logo-text'>✦</span>
@@ -31,10 +48,10 @@ const Navbar = () => {
         <button
           type='button'
           onClick={toggleNavList}
-          className='btn btn--icon navbar__hamburger'
+          className={`btn btn--icon navbar__hamburger ${showNavList ? 'navbar__hamburger--hidden' : ''}`}
           aria-label='toggle navigation'
         >
-          {showNavList ? <CloseIcon /> : <MenuIcon />}
+          <MenuIcon />
         </button>
 
         <ul className={`navbar__list ${showNavList ? 'navbar__list--active' : ''}`}>

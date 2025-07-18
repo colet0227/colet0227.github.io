@@ -49,7 +49,9 @@ const Experience = () => {
                 </div>
               </div>
               <div className='experience__story'>
-                <p>{exp.story}</p>
+                {exp.story.split('\n\n').map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
               </div>
             </div>
             

@@ -16,7 +16,18 @@ const About = () => {
             </h1>
           )}
 
-          {role && <h2 className='about__role'>{role}</h2>}
+          {role && (
+            <h2 className='about__role'>
+              {role.includes('Capital One') ? (
+                <>
+                  {role.split('Capital One')[0]}
+                  <span className='about__name'>Capital One</span>
+                </>
+              ) : (
+                role
+              )}
+            </h2>
+          )}
           <div className='description-container'>
             <p className='about__desc'>
               {description && description}
@@ -42,7 +53,7 @@ const About = () => {
                 aria-label='github'
                 className='link link--icon'
               >
-                <GitHubIcon />
+                <GitHubIcon style={{ fontSize: '2rem' }} />
               </a>
             )}
 
@@ -52,7 +63,7 @@ const About = () => {
                 aria-label='linkedin'
                 className='link link--icon'
               >
-                <LinkedInIcon />
+                <LinkedInIcon style={{ fontSize: '2.2rem' }} />
               </a>
             )}
           </>

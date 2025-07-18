@@ -97,60 +97,6 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    top: 1rem;
-    background: rgba(var(--clr-bg-rgb), 0.98);
-  }
-
-  .navbar__content {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    position: relative;
-  }
-
-  .navbar__logo {
-    display: none;
-  }
-
-  .navbar__list {
-    flex-direction: column;
-    gap: 0.25rem;
-    width: 100%;
-    align-items: center;
-  }
-
-  .navbar__list--active {
-    display: flex;
-  }
-
-  .navbar__list-item {
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar__link {
-    display: block;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .navbar__hamburger {
-    display: block !important;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: var(--clr-primary);
-    font-size: 1.2rem;
-  }
-
-  .navbar__list {
-    display: none;
-  }
-
-  .navbar__list--active {
-    display: flex;
+    display: none !important;
   }
 }

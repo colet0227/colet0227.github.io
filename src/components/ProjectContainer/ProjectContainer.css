@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0 auto;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: all .15s ease;
   background-color: var(--clr-bg-alt);
   border-radius: 16px;
   overflow: hidden;
@@ -18,7 +18,7 @@
 }
 
 .project:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -127,7 +127,7 @@
 
 .project__links {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
 .project__description {
@@ -182,13 +182,19 @@
 }
 
 .link--icon {
-  color: var(--clr-primary);
+  color: var(--clr-fg-alt);
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3rem;
 }
 
 .link--icon:hover {
   color: var(--clr-primary);
   transform: translateY(-2px);
+  filter: drop-shadow(0 4px 8px rgba(var(--clr-primary-rgb), 0.3));
 }
 
 /* Fix for the Connekt project */
@@ -251,8 +257,31 @@
     margin-bottom: 0.6rem;
   }
   
+  .project__navigation {
+    bottom: 15px;
+    gap: 8px;
+  }
+  
   .nav-arrow {
     width: 30px;
     height: 30px;
+    font-size: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  .nav-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: none;
+  }
+  
+  .image-counter {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
   }
 }

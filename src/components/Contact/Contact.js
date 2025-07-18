@@ -7,13 +7,12 @@ const Contact = () => {
   return (
     <section className='section contact center' id='contact'>
       <h2 className='section__title'>Contact</h2>
-      <a href={`mailto:${contact.email}`}>
-        <div className='ugly'>
-          <span type='button' className='btn btn--outline'>
-            Email Me!
-          </span>
-        </div>  
-      </a>
+      <div className='contact-container'>
+        <a href={`mailto:${contact.email}`} className='contact-button'>
+          <span className='contact-text'>Email Me!</span>
+          <span className='contact-icon'>✉️</span>
+        </a>
+      </div>
     </section>
   )
 }

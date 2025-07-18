@@ -1,9 +1,8 @@
 .section.experience {
   padding: 1.5rem 0;
-  scroll-margin-top: 30px;
+  scroll-margin-top: 50px;
   position: relative;
   overflow-x: visible;
-  overflow-y: hidden;
 }
 
 
@@ -245,9 +244,13 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--clr-fg);
-  margin: 0;
+  margin: 0 0 1rem 0;
   font-weight: 400;
   opacity: 0.9;
+}
+
+.experience__story p:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive Design */
@@ -298,20 +301,17 @@
     align-items: flex-start;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
-    transform: none !important;
   }
   
   .experience__content {
     width: calc(100% - 100px);
     padding: 1.5rem;
-    transform: none !important;
   }
   
   /* Story always visible on mobile */
   .experience__story {
     max-height: none !important;
     opacity: 1 !important;
-    transform: none !important;
   }
   
     /* Mobile simplified hovers */
@@ -350,7 +350,6 @@
   .experience__item {
     gap: 1rem;
     margin-bottom: 1.8rem;
-    transform: none !important;
   }
   
   .experience__content {
@@ -378,9 +377,6 @@
 }
 
 @media (max-width: 480px) {
-  .experience__item {
-    transform: none !important;
-  }
   
   .experience__content {
     padding: 1.2rem;
