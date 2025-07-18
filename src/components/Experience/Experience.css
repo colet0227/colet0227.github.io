@@ -47,7 +47,7 @@
 }
 
 .experience__item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 4rem;
 }
 
 /* Clean stacked cards with minimal overlap */
@@ -56,15 +56,15 @@
 }
 .experience__item:nth-child(2) { 
   z-index: 20;
-  transform: translateY(-0.5rem);
+  transform: translateY(1rem);
 }
 .experience__item:nth-child(3) { 
   z-index: 30;
-  transform: translateY(-1rem);
+  transform: translateY(2rem);
 }
 .experience__item:nth-child(4) { 
   z-index: 40;
-  transform: translateY(-1.5rem);
+  transform: translateY(3rem);
 }
 
 /* Cards positioned to fit within container */
@@ -87,55 +87,14 @@
   overflow: visible;
 }
 
-/* Individual company hover effects - card hover only */
-
-/* 
-=== INDIVIDUAL COMPANY HOVER EFFECTS ===
-Edit each one separately to customize movement and intensity
-*/
-
-/* Capital One hover (1st card) - clean effect */
-.experience__item:nth-child(1) .experience__content:hover {
-  transform: translateX(110px) translateY(-1.0rem);
-  border-color: rgba(var(--clr-primary-rgb), 0.15);
-  box-shadow: 
-    0 6px 20px rgba(0, 0, 0, 0.08),
-    0 2px 8px rgba(var(--clr-primary-rgb), 0.1);
-  z-index: 100;
-}
-
-/* Commit the Change hover (2nd card) - strong effect */
-.experience__item:nth-child(2) .experience__content:hover {
-  transform: translateX(110px) translateY(-1.0rem);
+/* Unified hover effects for all cards - expand in place */
+.experience__content:hover {
+  transform: translateX(120px);
   border-color: rgba(var(--clr-primary-rgb), 0.2);
   box-shadow: 
-    0 8px 25px rgba(0, 0, 0, 0.1),
-    0 3px 12px rgba(var(--clr-primary-rgb), 0.12);
-  z-index: 100;
-}
-
-/* AfterFlea hover (3rd card) - cool effect */
-.experience__item:nth-child(3) .experience__content:hover {
-  transform: translateX(110px) translateY(-1.0rem);
-  border-color: rgba(var(--clr-primary-rgb), 0.15);
-  box-shadow: 
     0 6px 20px rgba(0, 0, 0, 0.08),
     0 2px 8px rgba(var(--clr-primary-rgb), 0.1);
   z-index: 100;
-}
-
-/* UC Irvine hover (4th card) - subtle effect */
-.experience__item:nth-child(4) .experience__content:hover {
-  transform: translateX(110px) translateY(-1.0rem);
-  border-color: rgba(var(--clr-primary-rgb), 0.12);
-  box-shadow: 
-    0 5px 15px rgba(0, 0, 0, 0.06),
-    0 2px 6px rgba(var(--clr-primary-rgb), 0.08);
-  z-index: 100;
-}
-
-/* Generic fallback hover (if needed) */
-.experience__content:hover {
   transition: all 0.15s ease-out;
 }
 
@@ -164,11 +123,8 @@ Edit each one separately to customize movement and intensity
 
 /* Removed arrow tip for cleaner look */
 
-/* Enhanced line hover effects */
-.experience__item:nth-child(1) .experience__content:hover::after,
-.experience__item:nth-child(2) .experience__content:hover::after,
-.experience__item:nth-child(3) .experience__content:hover::after,
-.experience__item:nth-child(4) .experience__content:hover::after {
+/* Enhanced line hover effects - unified for all cards */
+.experience__content:hover::after {
   opacity: 1;
   width: 85px;
   left: -90px;
@@ -232,7 +188,7 @@ Edit each one separately to customize movement and intensity
 
 /* Header gets subtle enhancement on hover */
 .experience__content:hover .experience__header {
-  transform: translateY(-1px);
+  /* No vertical movement - just transition */
 }
 
 .experience__story {
@@ -241,14 +197,12 @@ Edit each one separately to customize movement and intensity
   opacity: 0;
   overflow: hidden;
   transition: all 0.2s ease-out;
-  transform: translateY(-5px);
 }
 
 /* Story reveal on hover */
 .experience__content:hover .experience__story {
-  max-height: 200px;
+  max-height: 400px;
   opacity: 1;
-  transform: translateY(0);
 }
 
 .experience__position {
@@ -309,22 +263,10 @@ Edit each one separately to customize movement and intensity
   
   /* 
   === TABLET RESPONSIVE HOVERS ===
-  Fast and clean effects
+  Unified hover effect for all cards
   */
-  .experience__item:nth-child(1) .experience__content:hover {
-    transform: translateX(80px) translateY(-0.4rem) scale(1.005);
-  }
-  
-  .experience__item:nth-child(2) .experience__content:hover {
-    transform: translateX(80px) translateY(-0.8rem) scale(1.01);
-  }
-  
-  .experience__item:nth-child(3) .experience__content:hover {
-    transform: translateX(80px) translateY(-1.2rem) scale(1.005);
-  }
-  
-  .experience__item:nth-child(4) .experience__content:hover {
-    transform: translateX(80px) translateY(-1.6rem) scale(1.005);
+  .experience__content:hover {
+    transform: translateX(80px) scale(1.005);
   }
   
   .experience__content::after {
