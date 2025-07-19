@@ -1,4 +1,5 @@
-import aboutpic from "./contexts/updated.jpeg"
+// import aboutpic from "./contexts/updated.jpeg"
+import aboutpic from "./contexts/yuh.PNG"
 import res from "./contexts/Resume.pdf"
 // import firecrest1 from "./contexts/firecrest1.png"
 // import firecrest2 from "./contexts/firecrest2.png"
@@ -37,7 +38,7 @@ const about = {
   name: 'Cole',
   role: 'Associate Software Engineer @ Capital One',
   description:
-    'Full-stack developer who loves solving problems and building cool tech: I enjoy working on everything from user interfaces to robust backend systems, particularly for projects that make a real impact. I\'m a Truckee, CA native currently living in DC',
+    'Full-stack developer who loves solving problems and building cool tech: has worked on everything from user interfaces to robust backend systems, particularly for projects that make a real impact. I\'m a Truckee, CA native currently living in DC',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
