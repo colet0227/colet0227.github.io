@@ -1,5 +1,5 @@
 # A personal portfolio by Cole Thompson
-do npm run deploy to update github pages
+do npm run deploy to update github pages and then u have to go in and type in url to dns check thingy
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
