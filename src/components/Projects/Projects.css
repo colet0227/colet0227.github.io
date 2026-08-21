@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
-  grid-gap: 2rem;
+  gap: 2rem;
   justify-content: center;
   align-items: stretch;
 }
@@ -39,41 +39,17 @@
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+  align-items: stretch;
 }
 
-.projects__grid > * {
-  display: flex;
-}
+.projects__grid > * { display: flex; }
+.projects__grid > *:nth-child(1) { grid-row: 1; }
+.projects__grid > *:nth-child(2) { grid-row: 2; }
+.projects__grid > *:nth-child(3) { grid-row: 3; }
 
-/* La Peña - Featured project (full width first row) */
-.projects__grid > *:nth-child(1) {
-  grid-row: 1;
-}
-
-/* Firecrest - Featured project (full width second row) */
-.projects__grid > *:nth-child(2) {
-  grid-row: 2;
-}
-
-/* Third row will be handled by the flexbox container */
-.projects__grid > *:nth-child(3) {
-  grid-row: 3;
-}
-
-/* Fabflix - 40% width */
-.projects__third-row > *:nth-child(1) {
-  flex: 0 0 39.5%;
-}
-
-/* Search Engine - 29% width */
-.projects__third-row > *:nth-child(2) {
-  flex: 0 0 25%;
-}
-
-/* Connekt - 31% width */
-.projects__third-row > *:nth-child(3) {
-  flex: 0 0 29%;
-}
+.projects__third-row > *:nth-child(1) { flex: 0 0 39.5%; }
+.projects__third-row > *:nth-child(2) { flex: 0 0 25%; }
+.projects__third-row > *:nth-child(3) { flex: 0 0 29%; }
 
 .project_description {
   margin-top: 4rem;
@@ -95,94 +71,35 @@
   text-decoration: none;
   padding: 1rem 2rem;
   border-radius: 50px;
-  background: linear-gradient(135deg, var(--clr-primary) 0%, rgba(var(--clr-primary-rgb), 0.8) 100%);
-  box-shadow: 0 4px 15px rgba(var(--clr-primary-rgb), 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.github-link::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.github-link:hover::before {
-  left: 100%;
+  background: var(--clr-primary);
 }
 
 .github-link:hover {
+  background: #1f6398;
   color: white;
   text-decoration: none;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(var(--clr-primary-rgb), 0.4);
-}
-
-.github-link:active {
-  transform: translateY(-1px) scale(1.02);
 }
 
 .github-link::after {
   content: '→';
   font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
-
-.github-link:hover::after {
-  transform: translateX(4px);
 }
 
 @media (max-width: 1200px) {
-  .projects__third-row > *:nth-child(1) {
-    flex: 0 0 40%;
-  }
-  
-  .projects__third-row > *:nth-child(2) {
-    flex: 0 0 29%;
-  }
-  
-  .projects__third-row > *:nth-child(3) {
-    flex: 0 0 31%;
-  }
+  .projects__third-row > *:nth-child(1) { flex: 0 0 40%; }
+  .projects__third-row > *:nth-child(2) { flex: 0 0 29%; }
+  .projects__third-row > *:nth-child(3) { flex: 0 0 31%; }
 }
 
 @media (max-width: 900px) {
-  .projects__third-row {
-    flex-direction: column;
-  }
-  
-  .projects__third-row > * {
-    flex: 1 1 100% !important;
-  }
+  .projects__third-row { flex-direction: column; }
+  .projects__third-row > * { flex: 1 1 100% !important; }
 }
 
 @media (max-width: 600px) {
-  .section.projects {
-    padding: 2rem 0;
-  }
-  
-  .section__title {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-  
-  .projects__grid {
-    margin-top: 1.5rem;
-    grid-gap: 1.8rem;
-  }
-  
-  .project_description {
-    margin-top: 2.5rem;
-  }
-  
-  .project_description p {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
+  .section.projects { padding: 2rem 0; }
+  .section__title { font-size: 1.8rem; margin-bottom: 2rem; }
+  .projects__grid { margin-top: 1.5rem; gap: 1.8rem; }
+  .project_description { margin-top: 2.5rem; }
+  .project_description p { font-size: 1rem; padding: 0.5rem 1rem; }
 }

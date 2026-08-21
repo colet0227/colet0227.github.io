@@ -29,17 +29,13 @@ const About = () => {
             </h2>
           )}
           <div className='description-container'>
-            <p className='about__desc'>
-              {description && description}
-            </p>
-            <span className="typing-indicator"></span>
+            <p className='about__desc'>{description && description}</p>
           </div>
         </div>
 
         {photo && (
-          // <img className="about__image" alt="Avatar placeholder" src={photo} />
           <div className='img-wrapper'>
-            <img alt="Avatar placeholder" src={photo} />
+            <img alt="Portrait of Cole Thompson" src={photo} />
           </div>
         )}
       </div>
@@ -48,21 +44,12 @@ const About = () => {
         {social && (
           <>
             {social.github && (
-              <a
-                href={social.github}
-                aria-label='github'
-                className='link link--icon'
-              >
+              <a href={social.github} aria-label='GitHub' className='link link--icon'>
                 <GitHubIcon style={{ fontSize: '2rem' }} />
               </a>
             )}
-
             {social.linkedin && (
-              <a
-                href={social.linkedin}
-                aria-label='linkedin'
-                className='link link--icon'
-              >
+              <a href={social.linkedin} aria-label='LinkedIn' className='link link--icon'>
                 <LinkedInIcon style={{ fontSize: '2.2rem' }} />
               </a>
             )}
@@ -71,8 +58,7 @@ const About = () => {
 
         {resume && (
           <a href={resume} className="resume-button" target="_blank" rel="noopener noreferrer">
-            <span className="resume-text">View Resume</span>
-            <span className="resume-icon">📄</span>
+            View Resume
           </a>
         )}
       </div>
