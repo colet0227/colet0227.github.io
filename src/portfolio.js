@@ -1,5 +1,4 @@
-// import aboutpic from "./contexts/updated.jpeg"
-import aboutpic from "./contexts/yuh.PNG"
+import aboutpic from "./contexts/profile.jpg"
 import res from "./contexts/Resume.pdf"
 // import firecrest1 from "./contexts/firecrest1.png"
 // import firecrest2 from "./contexts/firecrest2.png"
@@ -20,7 +19,6 @@ import fabflix2 from "./contexts/fabflix2.png"
 // import fabflix5 from "./contexts/fabflix5.png"
 // import fabflix6 from "./contexts/fabflix6.png"
 // import fabflix7 from "./contexts/fabflix7.png"
-import connekt1 from "./contexts/connekt1.png"
 // import connekt2 from "./contexts/connekt2.png"
 // import connekt3 from "./contexts/connekt3.png"
 import lapenamock from "./contexts/lapenamock.png"
@@ -36,9 +34,9 @@ const about = {
   photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
   name: 'Cole',
-  role: 'Associate Software Engineer @ Capital One',
+  role: 'Senior Associate Software Engineer @ Capital One',
   description:
-    'Full-stack developer who loves solving problems and building cool tech: has worked on everything from user interfaces to robust backend systems, particularly for projects that make a real impact. I\'m a Truckee, CA native currently living in DC',
+    'Full-stack developer, Truckee native, DC transplant, lifelong skier, mountain biker, and unapologetic reader of fantasy books with a map and a glossary. Oh, I cook sometimes too - I find my meals have become increasingly more edible',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
@@ -55,16 +53,6 @@ const projects = [
     sourceCode: 'https://github.com/ctc-uci/lpa',
     livePreview: '',
     images: [lapenamock]
-  },
-
-  {
-    name: 'Firecrest',
-    description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
-    projectDescription: 'Built with React and Flask, Firecrest offers a dashboard where users can harness multiple LLM models including OpenAI\'s GPT-3.5 and PaLM. The platform features customizable model parameters, allowing users to fine-tune token limits and temperature settings for optimal results - security is also paramount with OAuth 2.0 authentication, two-factor verification via Flask-Mail, and robust PostgreSQL data management supporting over 50 active accounts. Integrated with LangChain for enhanced AI workflows, the platform is deployed on Render for reliable, scalable performance.',
-    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'LangChain', 'Render', 'Git'],
-    sourceCode: '',
-    livePreview: 'https://firecrestai.com/',
-    images: [firecrestmock]
   },
 
   {
@@ -85,15 +73,6 @@ const projects = [
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
     images: [] // [search1, search2]
-  },
-
-  {
-    name: 'Connekt',
-    description: 'Connect, track, and achieve together—a fitness community app for group support and shared progress.',
-    projectDescription: 'Built with React and Flask, Connekt creates an engaging ecosystem where fitness enthusiasts can form groups, track personal progress, and celebrate collective milestones. Deployed on Render with robust PostgreSQL data management, the application prioritizes user experience through responsive design and real-time updates, creating a supportive digital fitness community that bridges the gap between personal goals and social encouragement.',
-    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'Render', 'Git'],
-    sourceCode: '',
-    images: [connekt1] // [connekt1, connekt2, connekt3]
   },
   
   // {
@@ -133,18 +112,38 @@ const projects = [
   //   ]
   // },
   
+
+  {
+    name: 'Firecrest',
+    description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
+    projectDescription: 'Built with React and Flask, Firecrest offers a dashboard where users can harness multiple LLM models including OpenAI\'s GPT-3.5 and PaLM. The platform features customizable model parameters, allowing users to fine-tune token limits and temperature settings for optimal results - security is also paramount with OAuth 2.0 authentication, two-factor verification via Flask-Mail, and robust PostgreSQL data management supporting over 50 active accounts. Integrated with LangChain for enhanced AI workflows, the platform is deployed on Render for reliable, scalable performance.',
+    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'LangChain', 'Render', 'Git'],
+    sourceCode: '',
+    livePreview: '',
+    images: [firecrestmock]
+  },
 ]
 
 const experience = [
   {
     name: 'Capital One',
-    description: 'May 2025 - Present',
+    description: 'August 2026 - Present',
+    position: 'Senior Associate Software Engineer',
+    story: '',
+    stack: [],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'Capital One',
+    description: 'August 2025 - July 2026',
     position: 'Associate Software Engineer',
     story: 'I\'m working on it... stay tuned!',
     stack: [],
     sourceCode: '',
     livePreview: '',
   },
+  // TODO: Add https://ctc-uci.com/ when rewriting this experience section.
   {
     name: 'Commit the Change',
     description: 'October 2024 - Present',
@@ -175,28 +174,26 @@ const experience = [
 ];
 
 const skills = [
-  'Python',
-  'JavaScript',
-  'Java',
-  'C/C++',
-  'HTML/CSS',
-  'React',
-  'Node.js',
-  'Express.js',
-  'Flask',
-  'MongoDB',
-  'PostgreSQL',
-  'MySQL',
-  'Docker',
-  'Kubernetes',
-  'AWS',
-  'Git',
-  'Linux',
-  'Maven',
-  'Tomcat',
-  'JMeter',
-  'Figma',
-  'Vim'
+  {
+    category: 'Languages',
+    items: ['Python', 'JavaScript', 'TypeScript', 'Java', 'C/C++', 'SQL', 'HTML/CSS'],
+  },
+  {
+    category: 'Frameworks',
+    items: ['React', 'Node.js', 'Express.js', 'Flask', 'Spring Boot'],
+  },
+  {
+    category: 'Cloud & Data',
+    items: ['AWS', 'Databricks', 'PySpark', 'S3', 'SQS', 'Lambda', 'IAM', 'RDS', 'Secrets Manager', 'CloudWatch', 'PostgreSQL', 'MySQL', 'MongoDB'],
+  },
+  {
+    category: 'Observability',
+    items: ['OpenTelemetry', 'New Relic'],
+  },
+  {
+    category: 'Tools',
+    items: ['Docker', 'Kubernetes', 'Git', 'Linux', 'Maven', 'Tomcat', 'JMeter', 'Figma', 'Vim'],
+  },
 ];
 
 

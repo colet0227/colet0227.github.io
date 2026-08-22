@@ -47,9 +47,8 @@
 .projects__grid > *:nth-child(2) { grid-row: 2; }
 .projects__grid > *:nth-child(3) { grid-row: 3; }
 
-.projects__third-row > *:nth-child(1) { flex: 0 0 39.5%; }
-.projects__third-row > *:nth-child(2) { flex: 0 0 25%; }
-.projects__third-row > *:nth-child(3) { flex: 0 0 29%; }
+.projects__third-row > *:nth-child(1) { flex: 0 0 58%; }
+.projects__third-row > *:nth-child(2) { flex: 0 0 38%; }
 
 .project_description {
   margin-top: 4rem;
@@ -80,15 +79,10 @@
   text-decoration: none;
 }
 
-.github-link::after {
-  content: '→';
-  font-size: 1.2rem;
-}
 
 @media (max-width: 1200px) {
-  .projects__third-row > *:nth-child(1) { flex: 0 0 40%; }
-  .projects__third-row > *:nth-child(2) { flex: 0 0 29%; }
-  .projects__third-row > *:nth-child(3) { flex: 0 0 31%; }
+  .projects__third-row > *:nth-child(1) { flex: 0 0 56%; }
+  .projects__third-row > *:nth-child(2) { flex: 0 0 40%; }
 }
 
 @media (max-width: 900px) {

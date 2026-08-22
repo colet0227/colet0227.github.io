@@ -10,7 +10,6 @@ const Contact = () => {
       <div className='contact-container'>
         <a href={`mailto:${contact.email}`} className='contact-button'>
           <span className='contact-text'>Email Me!</span>
-          <span className='contact-icon'>✉️</span>
         </a>
       </div>
     </section>

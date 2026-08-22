@@ -29,7 +29,10 @@ const About = () => {
             </h2>
           )}
           <div className='description-container'>
-            <p className='about__desc'>{description && description}</p>
+            <p className='about__desc'>
+              {description && description}
+              <span className='typing-indicator' aria-hidden='true' />
+            </p>
           </div>
         </div>
 
