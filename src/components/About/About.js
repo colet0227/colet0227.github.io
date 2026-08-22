@@ -4,7 +4,7 @@ import { about } from '../../portfolio'
 import './About.css'
 
 const About = () => {
-  const {photo, name, role, description, resume, social} = about
+  const {photo, name, role, description, browseText, resume, social} = about
 
   return (
     <div className='about center'>
@@ -29,10 +29,13 @@ const About = () => {
             </h2>
           )}
           <div className='description-container'>
-            <p className='about__desc'>
-              {description && description}
-              <span className='typing-indicator' aria-hidden='true' />
-            </p>
+            <p className='about__desc'>{description && description}</p>
+            {browseText && (
+              <p className='about__browse'>
+                {browseText}
+                <span className='typing-indicator' aria-hidden='true' />
+              </p>
+            )}
           </div>
         </div>
 

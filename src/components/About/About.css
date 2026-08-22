@@ -57,6 +57,11 @@
   display: inline;
 }
 
+.about__browse {
+  margin: 0.9rem 0 0;
+  font-size: 1rem;
+}
+
 .about__contact {
   margin-top: 2.4em;
   display: flex;
@@ -170,5 +175,6 @@
 
 @media (max-width: 420px) {
   .about h1 { font-size: 2.25rem; }
-  .about__desc { font-size: 0.94rem; }
+  .about__desc,
+  .about__browse { font-size: 0.94rem; }
 }
