@@ -36,7 +36,7 @@ const about = {
   name: 'Cole',
   role: 'Senior Associate Software Engineer @ Capital One',
   description:
-    'Full-stack developer, Truckee native, DC transplant, lifelong skier, mountain biker, and unapologetic reader of fantasy books with a map and a glossary. Oh, I cook sometimes too - I find my meals have become increasingly more edible',
+    'Full-stack developer, Truckee native, DC transplant, lifelong skier, mountain biker, and unapologetic reader of fantasy books with a map and a glossary. Oh, I cook sometimes too - I find my meals have become increasingly more edible.',
   browseText: 'Feel free to poke around',
   resume: res,
   social: {
@@ -165,7 +165,7 @@ const experience = [
   },
   {
     name: 'UC Irvine',
-    description: 'January 2023 - June 2023',
+    description: 'March 2023 - June 2023',
     position: 'Undergraduate Lab Tutor',
     story: 'As an Lab Assistant at UC Irvine for ICS 32, I had the privilege of guiding over 50 students through their journey of learning Python programming in various computing environments. This role taught me as much about communication and patience as it did about reinforcing my own technical skills - I worked with students on building programs for diverse problem sets, helping them understand not just the syntax and logic of Python, but the broader concepts of computational thinking and problem-solving.\n\nWhat I found most rewarding was introducing students to the vast ecosystem of Python libraries and watching their excitement as they discovered how to leverage powerful modules for practical applications (we really explored everything from graphics using TKinter to working with web APIs and network programming/socket communications). Each tutoring session was different - some students needed help debugging complex logic, others wanted to understand best practices for code organization, and many were curious about how the concepts they were learning connected to real-world software development.',
     stack: [],

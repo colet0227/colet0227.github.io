@@ -26,13 +26,15 @@
 }
 
 .experience__identity {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
   min-width: 0;
 }
 
-.experience__identity-copy { min-width: 0; }
+.experience__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
 
 .experience__logo {
   width: 32px;
@@ -41,7 +43,6 @@
   flex: 0 0 32px;
   object-fit: contain;
   background: var(--clr-bg-alt);
-  border: 1px solid rgba(var(--clr-primary-rgb), 0.14);
   border-radius: 50%;
   opacity: 0.9;
 }
@@ -90,4 +91,6 @@
     margin: 0;
     white-space: normal;
   }
+
+  .experience__meta { flex-shrink: 1; }
 }
