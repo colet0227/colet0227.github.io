@@ -13,7 +13,7 @@ const companyLogos = {
   'UC Irvine': uciLogo,
 }
 
-const borderedLogos = new Set(['AfterFlea'])
+const borderedLogos = new Set(['Commit the Change', 'AfterFlea'])
 
 const Experience = () => {
   if (!experience.length) return null

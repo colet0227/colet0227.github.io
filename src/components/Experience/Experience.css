@@ -9,9 +9,7 @@
 }
 
 .experience__item {
-  display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  column-gap: 1.15rem;
+  position: relative;
   padding: 1.8rem 0;
   border-top: 1px solid rgba(var(--clr-primary-rgb), 0.16);
 }
@@ -21,7 +19,6 @@
 }
 
 .experience__header {
-  grid-column: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,9 +31,9 @@
 }
 
 .experience__logo {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: start;
+  position: absolute;
+  top: 1.7rem;
+  left: -72px;
   width: 48px;
   height: 48px;
   padding: 4px;
@@ -72,10 +69,6 @@
   margin: 0.15rem 0 0;
 }
 
-.experience__story {
-  grid-column: 2;
-}
-
 .experience__story p {
   font-size: 0.97rem;
   line-height: 1.65;
@@ -85,14 +78,29 @@
 
 .experience__story p:last-child { margin-bottom: 0; }
 
+@media (max-width: 900px) {
+  .experience__container {
+    margin-left: 64px;
+    margin-right: 0;
+  }
+
+  .experience__logo {
+    left: -60px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
 @media (max-width: 600px) {
+  .experience__container { margin-left: 58px; }
+
   .experience__item {
-    grid-template-columns: 42px minmax(0, 1fr);
-    column-gap: 0.85rem;
     padding: 1.4rem 0;
   }
 
   .experience__logo {
+    top: 1.35rem;
+    left: -54px;
     width: 42px;
     height: 42px;
     padding: 3px;
