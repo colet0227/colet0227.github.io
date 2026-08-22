@@ -24,13 +24,14 @@ const Experience = () => {
           <article key={`${exp.name}-${exp.position}`} className='experience__item'>
             <header className='experience__header'>
               <div className='experience__identity'>
-                <img
-                  className='experience__logo'
-                  src={companyLogos[exp.name]}
-                  alt={`${exp.name} logo`}
-                />
-                <div>
-                  <h3 className='experience__position'>{exp.position}</h3>
+                <h3 className='experience__position'>{exp.position}</h3>
+                <div className='experience__company-row'>
+                  <img
+                    className='experience__logo'
+                    src={companyLogos[exp.name]}
+                    alt=''
+                    aria-hidden='true'
+                  />
                   <p className='experience__company'>{exp.name}</p>
                 </div>
               </div>

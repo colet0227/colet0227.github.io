@@ -5,6 +5,8 @@
   border: 1px solid rgba(var(--clr-primary-rgb), 0.14);
   border-radius: 12px;
   width: 100%;
+  min-width: 0;
+  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -17,6 +19,7 @@
 
 .project__content {
   width: 100%;
+  min-width: 0;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
@@ -35,6 +38,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--clr-fg-alt);
+  overflow-wrap: anywhere;
 }
 
 .project__links {
@@ -59,6 +63,7 @@
   margin: 0;
   line-height: 1.65;
   color: var(--clr-fg);
+  overflow-wrap: anywhere;
 }
 
 .project__description p { font-size: 1rem; }
@@ -93,6 +98,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .project__content { padding: 1.4rem; }
+  .project__content { padding: 1.2rem; }
   .project__title { font-size: 1.3rem; }
 }

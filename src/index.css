@@ -16,6 +16,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; }
+
 h1,
 h2,
 h3,
