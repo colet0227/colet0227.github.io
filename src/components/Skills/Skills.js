@@ -33,7 +33,7 @@ const skillIcons = {
   'Spring Boot': <SiSpringboot size={32} color='#6DB33F' />,
   AWS: <LgAws size={32} />,
   Databricks: <SiDatabricks size={32} color='#FF3621' />,
-  PySpark: <SiApachespark size={32} color='#E25A1C' />,
+  'Apache Spark': <SiApachespark size={32} color='#E25A1C' />,
   S3: <SiAmazons3 size={32} color='#569A31' />,
   SQS: <SiAmazonsqs size={32} color='#FF4F8B' />,
   Lambda: <SiAwslambda size={32} color='#FF9900' />,

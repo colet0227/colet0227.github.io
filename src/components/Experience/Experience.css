@@ -33,7 +33,7 @@
 .experience__logo {
   position: absolute;
   top: 1.7rem;
-  left: -72px;
+  left: -80px;
   width: 48px;
   height: 48px;
   padding: 4px;
@@ -80,19 +80,19 @@
 
 @media (max-width: 900px) {
   .experience__container {
-    margin-left: 64px;
+    margin-left: 72px;
     margin-right: 0;
   }
 
   .experience__logo {
-    left: -60px;
+    left: -68px;
     width: 46px;
     height: 46px;
   }
 }
 
 @media (max-width: 600px) {
-  .experience__container { margin-left: 58px; }
+  .experience__container { margin-left: 64px; }
 
   .experience__item {
     padding: 1.4rem 0;
@@ -100,7 +100,7 @@
 
   .experience__logo {
     top: 1.35rem;
-    left: -54px;
+    left: -60px;
     width: 42px;
     height: 42px;
     padding: 3px;

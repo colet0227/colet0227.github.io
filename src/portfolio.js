@@ -185,7 +185,7 @@ const skills = [
   },
   {
     category: 'Cloud & Data',
-    items: ['AWS', 'Databricks', 'PySpark', 'S3', 'SQS', 'Lambda', 'IAM', 'RDS', 'Secrets Manager', 'CloudWatch', 'PostgreSQL', 'MySQL', 'MongoDB'],
+    items: ['AWS', 'Databricks', 'Apache Spark', 'S3', 'SQS', 'Lambda', 'IAM', 'RDS', 'Secrets Manager', 'CloudWatch', 'PostgreSQL', 'MySQL', 'MongoDB'],
   },
   {
     category: 'Observability',
