@@ -36,7 +36,9 @@ const about = {
   name: 'Cole',
   role: 'Senior Associate Software Engineer @ Capital One',
   description:
-    'Full-stack developer, Truckee native, DC transplant, lifelong skier, mountain biker, and unapologetic reader of fantasy books with a map and a glossary. Oh, I cook sometimes too - I find my meals have become increasingly more edible.',
+    'At the moment, I\'m a full-stack developer building software at Capital One for problems that involve a lot of data, a lot of infrastructure, and a lot of moving pieces.',
+  personalDescription:
+    'Truckee native, DC transplant, lifelong skier, mountain biker, and unapologetic reader of fantasy books with a map and a glossary. Oh, I cook sometimes too - I find my meals have become increasingly more edible.',
   browseText: 'Feel free to poke around',
   resume: res,
   social: {
