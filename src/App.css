@@ -12,9 +12,9 @@
 
 .content {
   height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0 6%;
+  width: 88%;
+  margin: 0 auto;
+  padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -53,6 +53,8 @@ main {
 }
 
 .section {
+  width: 100%;
+  min-width: 0;
   margin-top: 5em;
   scroll-margin-top: 80px;
 }
@@ -154,8 +156,7 @@ main {
   transform: translateY(-5px);
 }
 
-.section.experience,
-.section.skills {
+.section.experience {
   margin-top: 1em;
 }
 
@@ -164,14 +165,17 @@ main {
 }
 
 @media (max-width: 600px) {
-  .content { padding: 0 1rem; }
+  .content {
+    width: calc(100% - 2rem);
+    margin: 0 1rem;
+    padding: 0;
+  }
 
   .section {
     margin-top: 4em;
   }
 
-  .section.experience,
-  .section.skills {
+  .section.experience {
     margin-top: 2.5em;
   }
 

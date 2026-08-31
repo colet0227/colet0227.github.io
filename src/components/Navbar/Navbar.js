@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { projects, skills, contact, experience } from '../../portfolio'
+import { projects, contact, experience } from '../../portfolio'
 import MenuIcon from '@mui/icons-material/Menu'
 import './Navbar.css'
 
@@ -75,18 +75,6 @@ const Navbar = () => {
                 className='navbar__link'
               >
                 Experience
-              </a>
-            </li>
-          ) : null}
-
-          {skills.length ? (
-            <li className='navbar__list-item'>
-              <a
-                href='#skills'
-                onClick={(e) => smoothScrollTo('skills', e)}
-                className='navbar__link'
-              >
-                Skills
               </a>
             </li>
           ) : null}
