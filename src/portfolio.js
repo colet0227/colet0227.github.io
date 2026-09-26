@@ -1,5 +1,4 @@
-// import aboutpic from "./contexts/updated.jpeg"
-import aboutpic from "./contexts/yuh.PNG"
+import aboutpic from "./contexts/profile.jpg"
 import res from "./contexts/Resume.pdf"
 // import firecrest1 from "./contexts/firecrest1.png"
 // import firecrest2 from "./contexts/firecrest2.png"
@@ -20,7 +19,6 @@ import fabflix2 from "./contexts/fabflix2.png"
 // import fabflix5 from "./contexts/fabflix5.png"
 // import fabflix6 from "./contexts/fabflix6.png"
 // import fabflix7 from "./contexts/fabflix7.png"
-import connekt1 from "./contexts/connekt1.png"
 // import connekt2 from "./contexts/connekt2.png"
 // import connekt3 from "./contexts/connekt3.png"
 import lapenamock from "./contexts/lapenamock.png"
@@ -36,9 +34,12 @@ const about = {
   photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
   name: 'Cole',
-  role: 'Associate Software Engineer @ Capital One',
+  role: 'Software Engineer II @ Capital One',
   description:
-    'Full-stack developer who loves solving problems and building cool tech: has worked on everything from user interfaces to robust backend systems, particularly for projects that make a real impact. I\'m a Truckee, CA native currently living in DC',
+    'At the moment, I\'m a full-stack developer building software at Capital One for problems that involve a lot of data, a lot of infrastructure, and a lot of moving pieces.',
+  personalDescription:
+    'Originally from Truckee, CA and now a DC transplant, I\'m a lifelong skier, mountain biker, and big fan of fantasy books with a map and a glossary. Oh, I cook sometimes too - I find my meals have become increasingly more edible.',
+  browseText: 'Feel free to poke around',
   resume: res,
   social: {
     linkedin: 'https://www.linkedin.com/in/cole-thompson-991682251/',
@@ -49,28 +50,29 @@ const about = {
 const projects = [
   {
     name: 'La Peña',
-    description: 'Transform La Peña\'s operations with this comprehensive web platform designed to streamline invoicing, event scheduling, and administrative workflows.',
-    projectDescription: 'The platform integrates React frontend components with a robust Node.js and Express backend, creating an intuitive experience for managing over 50 monthly cultural events and workshops. I translated detailed Figma designs into pixel-perfect responsive interfaces and delivered exceptional user experience while reducing administrative workload by 60%. The system features sophisticated invoice calculation logic, automated booking management, and streamlined client data handling through PostgreSQL, saving hours of manual work and enabling staff to focus on their cultural mission.',
+    description: 'I got to spend a whole year (or just about, anyways) helping La Peña Cultural Center move its event scheduling and invoicing out of spreadsheets, which turned into a much more interesting project than that sentence probably suggests. About 20 student developers, designers, and tech leads came together to build a full-stack portal with React, Node.js, Express, and PostgreSQL. It gave staff one place to manage programs, recurring sessions, rooms, clients, and invoice statuses, sync schedules with Google Calendar, and generate/email monthly invoices so changes made in one place stayed consistent everywhere.',
+    projectDescription: (
+      <>
+        I bounced between responsive frontend work and the APIs behind bookings and invoices. Some of our designers put together an amazing{' '}
+        <a href='https://medium.com/@committhechange.uci/project-overview-la-pe%C3%B1a-cultural-center-53f2fa5ddb34' target='_blank' rel='noreferrer'>project overview</a>, and you should absolutely check out{' '}
+        <a href='https://lapena.org/' target='_blank' rel='noreferrer'>La Peña</a> too - they've been doing some great stuff bringing Latin American communities together through art, activism, classes, workshops, and live events.
+      </>
+    ),
     stack: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JavaScript', 'HTML', 'CSS', 'Chakra UI', 'Figma', 'Git'],
     sourceCode: 'https://github.com/ctc-uci/lpa',
-    livePreview: '',
+    livePreview: 'https://medium.com/@committhechange.uci/project-overview-la-pe%C3%B1a-cultural-center-53f2fa5ddb34',
     images: [lapenamock]
   },
 
   {
-    name: 'Firecrest',
-    description: 'Unlock the power of this generative AI dashboard to streamline repetitive tasks and drive your team toward unparalleled growth and efficiency.',
-    projectDescription: 'Built with React and Flask, Firecrest offers a dashboard where users can harness multiple LLM models including OpenAI\'s GPT-3.5 and PaLM. The platform features customizable model parameters, allowing users to fine-tune token limits and temperature settings for optimal results - security is also paramount with OAuth 2.0 authentication, two-factor verification via Flask-Mail, and robust PostgreSQL data management supporting over 50 active accounts. Integrated with LangChain for enhanced AI workflows, the platform is deployed on Render for reliable, scalable performance.',
-    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'LangChain', 'Render', 'Git'],
-    sourceCode: '',
-    livePreview: 'https://firecrestai.com/',
-    images: [firecrestmock]
-  },
-
-  {
     name: 'Fabflix',
-    description: 'Effortlessly browse, search, and buy movies on this secure, high-performance web platform.',
-    projectDescription: 'Built to handle massive scale with 20,000+ movies and 70,000+ actors, Fabflix delivers lightning-fast search experiences through optimized MySQL databases and smart caching strategies. The platform showcases advanced full-stack development with AJAX-powered interfaces, session-based shopping cart functionality, and sophisticated auto-complete search features. Security includes HTTPS encryption, reCAPTCHA integration, and SQL injection prevention. Deployed on AWS infrastructure using Docker and Kubernetes for scalability, with performance optimizations achieved through JMeter testing that improved database response times by 25%.',
+    description: (
+      <>
+        Yes, this was a school project, and no, I was not seriously trying to sell DVDs on the internet. It did give me an unusually complete look at how a web application fits together, from Java servlets and MySQL queries to authentication, database replication, load balancing, and containerized deployment. I linked some{' '}
+        <a href='https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH' target='_blank' rel='noreferrer'>demo videos</a> so you can see it in action.
+      </>
+    ),
+    projectDescription: '',
     stack: ['JavaScript', 'jQuery', 'AJAX', 'Tomcat', 'MySQL', 'HTML', 'CSS', 'Docker', 'Kubernetes', 'JMeter', 'Maven', 'AWS', 'Git'],
     sourceCode: '',
     livePreview: 'https://www.youtube.com/playlist?list=PLopnzHCsaUJvidSw8kih9TMbWGLCdnLZH',
@@ -79,21 +81,12 @@ const projects = [
 
   {
     name: 'Search Engine and Web Crawler',
-    description: 'Quickly access precise information across UC Irvine\'s computer science subdomain with this tailored, high-performance search engine.',
-    projectDescription: 'The system processes over 50,000 documents while maintaining sub-100ms query response times. Built with Python and Flask, the platform implements ranking using tf-idf scoring and cosine similarity, enhanced with HTML tag weighting for improved relevance. The crawler features intelligent duplicate detection through sim-hashing with blake2b, comprehensive trap detection, and partial indexing that reduces resource usage by over 80%.',
+    description: 'This was my attempt to build a very small, very UCI-specific search engine. I crawled the university\'s computer science websites, filtered out traps and near-duplicate pages, and built an inverted index over something like 50,000 documents. Searches were ranked with TF-IDF, weighted HTML tags, and cosine similarity, then served through a Flask interface. Was definitely a fun one.',
+    projectDescription: '',
     stack: ['Python', 'Flask', 'Beautiful Soup', 'NLTK', 'Hashlib', 'HTML', 'CSS', 'Git'],
     sourceCode: 'https://github.com/colet0227/Search_Engine',
     livePreview: '',
     images: [] // [search1, search2]
-  },
-
-  {
-    name: 'Connekt',
-    description: 'Connect, track, and achieve together—a fitness community app for group support and shared progress.',
-    projectDescription: 'Built with React and Flask, Connekt creates an engaging ecosystem where fitness enthusiasts can form groups, track personal progress, and celebrate collective milestones. Deployed on Render with robust PostgreSQL data management, the application prioritizes user experience through responsive design and real-time updates, creating a supportive digital fitness community that bridges the gap between personal goals and social encouragement.',
-    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'Render', 'Git'],
-    sourceCode: '',
-    images: [connekt1] // [connekt1, connekt2, connekt3]
   },
   
   // {
@@ -133,76 +126,76 @@ const projects = [
   //   ]
   // },
   
+
+  {
+    name: 'Firecrest',
+    description: 'Firecrest was sort of my first attempt at building a full-stack app from scratch, conveniently timed about six months after ChatGPT launched. It started as a simple LLM wrapper, then grew into a content workspace for organizing prompts and turning LangChain-generated responses into emails, blog posts, and other publishable formats through a preview and publishing flow. I built it with React, Flask, and PostgreSQL. It was a little overambitious considering I hadn’t even taken my data structures class and the idea/execution could’ve used more fleshing out, but eh, it was as fine a first project as any.',
+    projectDescription: '',
+    stack: ['React', 'Flask', 'PostgreSQL', 'Python', 'JavaScript', 'HTML', 'CSS', 'LangChain', 'Render', 'Git'],
+    sourceCode: 'https://github.com/colet0227/firecrest',
+    livePreview: '',
+    images: [firecrestmock]
+  },
 ]
 
 const experience = [
   {
     name: 'Capital One',
-    description: 'May 2025 - Present',
-    position: 'Associate Software Engineer',
-    story: 'I\'m working on it... stay tuned!',
+    description: 'August 2026 - Present',
+    position: 'Software Engineer II',
+    story: 'I recently joined Fractal, Capital One’s platform for helping analysts define customer audiences, test decision rules, and launch targeted credit-card promotions or changes to existing card accounts through one governed workflow. Stay tuned!!',
+    stack: [],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'Capital One',
+    description: 'August 2025 - July 2026',
+    position: 'Software Engineer I',
+    story: (
+      <>
+        <p>
+          I spent my first year at Capital One working on Scan, the platform responsible for finding highly sensitive human information sitting unprotected in the company&apos;s cloud data (think unencrypted Social Security numbers, passport numbers, credit card numbers, etc. - this entire organization sprouted from an ugly{' '}
+          <a href='https://www.capitalone.com/digital/facts2019/' target='_blank' rel='noreferrer'>2019 data breach</a>). Lots of fun stuff to work on though - my biggest project being an AI labeling workflow that used Spark to group similar findings before an LLM decided whether they were actually sensitive or not. Basically it went - pull from an upstream dataset that got billions of records a day, cluster &apos;em down into a reasonable amount, send &apos;em on a queue so we can decouple the labeling from the clustering, and have a Lambda label/publish to a new dataset! I worked on everything from the clustering logic and prompt refinement to all the observability (through OpenTelemetry and New Relic) that let us follow the system through production.
+        </p>
+        <p>
+          Also, with Discover integrating into Capital One, its teams suddenly had a lot of cloud data that the credit card teams couldn&apos;t use until Scan cleared it. I built the whole React frontend that let them submit scans and track their progress without pulling in a developer every time, along with the API integrations, OAuth/AD-group access, and Jenkins setup needed to actually ship it. I did plenty of other stuff during my stint here too - automating false-positive suppression, recovering failed scan records, fixing production bugs, and building reusable AI skills for teams around the org.
+        </p>
+      </>
+    ),
     stack: [],
     sourceCode: '',
     livePreview: '',
   },
   {
     name: 'Commit the Change',
-    description: 'October 2024 - Present',
+    description: 'October 2024 - June 2025',
     position: 'Software Engineer',
-    story: 'At Commit the Change, I worked on a transformative project for La Peña Cultural Center, a super cool nonprofit that hosts cultural events and workshops in the Bay Area. What started as a technical challenge became a mission to streamline their operations and amplify their cultural impact. I helped engineer a comprehensive React-based web application that revolutionized their administrative workflow, reducing manual processing time by 60% while also managing over 50 monthly bookings.\n\nThe project involved building robust RESTful API endpoints using Node.js, Express, and PostgreSQL to handle complex invoicing, room bookings, and client data management. I spent a ton of time translating high-fidelity Figma designs into pixel-perfect, responsive interfaces that prioritized user experience across authentication, invoicing, and event scheduling systems. I also optimized the invoice calculation logic to accurately apply booking-specific adjustments and automated inventory tracking, saving the organization 10 ish hours of manual work each month so they can focus on what matters most - fostering that cultural community.',
-    stack: [],
-    sourceCode: '',
-    livePreview: '',
-  },
-  {
-    name: 'AfterFlea',
-    description: 'January 2024 - April 2024',
-    position: 'Software Engineer Intern',
-    story: 'During my internship at Afterflea, I contributed to an innovative platform that reimagines how people connect and communicate online. The experience was particularly exciting because I was working on cutting-edge technology that helps users create and manage multiple digital personas for different aspects of their lives. A large focus of mine was redesigning the landing page using React and JavaScript, where I applied modern UI/UX principles to create a more engaging first impression - the results were also tangible: we saw a 30% increase in user engagement reflected through new waitlist sign-ups.\n\nI also dove deep into backend development, building RESTful API routes using Express and integrating MongoDB to enhance the platform\'s messaging functionality. This work was crucial in supporting communication for over 100 unique user personas on the platform. Additionally, I took on a design role, creating detailed mockups in Figma for the platform\'s user feed feature. What made this particularly valuable was the collaborative feedback process - I worked closely with early testers to gather insights and iterate on the design, ensuring we built something that truly served users\' needs rather than just following our initial assumptions.',
+    website: 'https://ctc-uci.com/',
+    story: (
+      <p>
+        La Peña was my project with{' '}
+        <a href='https://ctc-uci.com/' target='_blank' rel='noreferrer'>Commit the Change</a>, a student organization that builds software for nonprofits while giving UCI designers and developers some real product experience!
+      </p>
+    ),
     stack: [],
     sourceCode: '',
     livePreview: '',
   },
   {
     name: 'UC Irvine',
-    description: 'January 2023 - June 2023',
+    description: 'March 2023 - June 2023',
     position: 'Undergraduate Lab Tutor',
-    story: 'As an Lab Assistant at UC Irvine for ICS 32, I had the privilege of guiding over 50 students through their journey of learning Python programming in various computing environments. This role taught me as much about communication and patience as it did about reinforcing my own technical skills - I worked with students on building programs for diverse problem sets, helping them understand not just the syntax and logic of Python, but the broader concepts of computational thinking and problem-solving.\n\nWhat I found most rewarding was introducing students to the vast ecosystem of Python libraries and watching their excitement as they discovered how to leverage powerful modules for practical applications (we really explored everything from graphics using TKinter to working with web APIs and network programming/socket communications). Each tutoring session was different - some students needed help debugging complex logic, others wanted to understand best practices for code organization, and many were curious about how the concepts they were learning connected to real-world software development.',
+    story: 'For one quarter, I got credit to stare at other people’s Python code and ask suspiciously simple questions until the bug revealed itself. Officially, I was helping students through ICS 32; unofficially, I was learning how to debug without touching the keyboard and relearning how web sockets work.',
     stack: [],
     sourceCode: '',
     livePreview: '',
   }
 ];
 
-const skills = [
-  'Python',
-  'JavaScript',
-  'Java',
-  'C/C++',
-  'HTML/CSS',
-  'React',
-  'Node.js',
-  'Express.js',
-  'Flask',
-  'MongoDB',
-  'PostgreSQL',
-  'MySQL',
-  'Docker',
-  'Kubernetes',
-  'AWS',
-  'Git',
-  'Linux',
-  'Maven',
-  'Tomcat',
-  'JMeter',
-  'Figma',
-  'Vim'
-];
-
-
 const contact = {
   // email is optional - if left empty Contact section won't show up
   email: 'colet0227@gmail.com',
 }
 
-export { header, about, projects, skills, contact, experience }
+export { header, about, projects, contact, experience }

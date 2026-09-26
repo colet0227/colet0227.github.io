@@ -12,11 +12,11 @@ const Projects = () => {
       <h2 className='section__title'>Projects</h2>
 
       <div className='projects__grid'>
-        {projects.slice(0, 2).map((project) => (
+        {projects.slice(0, 1).map((project) => (
           <ProjectContainer key={uniqid()} project={project} />
         ))}
-        <div className='projects__third-row'>
-          {projects.slice(2, 5).map((project) => (
+        <div className='projects__three-column-row'>
+          {projects.slice(1, 4).map((project) => (
             <ProjectContainer key={uniqid()} project={project} />
           ))}
         </div>
