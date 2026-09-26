@@ -34,7 +34,7 @@ const about = {
   photo:aboutpic,
   // all the properties are optional - can be left empty or deleted
   name: 'Cole',
-  role: 'Senior Associate Software Engineer @ Capital One',
+  role: 'Software Engineer II @ Capital One',
   description:
     'At the moment, I\'m a full-stack developer building software at Capital One for problems that involve a lot of data, a lot of infrastructure, and a lot of moving pieces.',
   personalDescription:
