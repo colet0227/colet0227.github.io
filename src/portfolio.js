@@ -169,7 +169,7 @@ const experience = [
   },
   {
     name: 'Commit the Change',
-    description: 'October 2024 - Present',
+    description: 'October 2024 - June 2025',
     position: 'Software Engineer',
     website: 'https://ctc-uci.com/',
     story: (
