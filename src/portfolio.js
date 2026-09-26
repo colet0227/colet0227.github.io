@@ -142,7 +142,7 @@ const experience = [
   {
     name: 'Capital One',
     description: 'August 2026 - Present',
-    position: 'Senior Associate Software Engineer',
+    position: 'Software Engineer II',
     story: 'I recently joined Fractal, Capital One’s platform for helping analysts define customer audiences, test decision rules, and launch targeted credit-card promotions or changes to existing card accounts through one governed workflow. Stay tuned!!',
     stack: [],
     sourceCode: '',
@@ -151,7 +151,7 @@ const experience = [
   {
     name: 'Capital One',
     description: 'August 2025 - July 2026',
-    position: 'Associate Software Engineer',
+    position: 'Software Engineer I',
     story: (
       <>
         <p>
